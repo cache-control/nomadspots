@@ -19,6 +19,10 @@ npm install
 npm run dev
 ```
 
+## TODO
+* Implement api route rate-limiting
+* Explore marker clustering to improve render performance
+
 ## Screenshot
 
 ![Screenshot](/public/screenshot.png)

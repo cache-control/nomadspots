@@ -1,2 +1,24 @@
-# nomadspots
+# Nomad Spots
 Find the next rest spot
+
+## Introduction
+This is for personal-use only, and demonstrates how to use React Leaflet with
+OpenstreeMap. This application helps travelers to find the next rest spot. For
+convenience data is collated from three sources and displayed with markers on a
+map. The focus is on finding rest spots while traveling in the United States.
+
+## Instruction
+
+* Create an account with MongoDB Atlas.
+* Add `MONGODB_URI=<url>` variable to `.env.local`.
+* Create db `geo` with collection `spots` in Atlas.
+* Import `spots.json` into Atlas.
+
+```
+npm install
+npm run dev
+```
+
+## Screenshot
+
+![Screenshot](/public/screenshot.png)

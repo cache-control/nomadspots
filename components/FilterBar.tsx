@@ -25,7 +25,8 @@ export default function FilterBar({ filter, setFilter }: FilterBarProps) {
           >
             <ToggleGroupItem value="Sites">Sites</ToggleGroupItem>
             <ToggleGroupItem value="Water">Water</ToggleGroupItem>
-            <ToggleGroupItem value="Showers" className="pr-5">Showers</ToggleGroupItem>
+            <ToggleGroupItem value="Showers">Showers</ToggleGroupItem>
+            <ToggleGroupItem value="Unknown" className="pr-5">Unknown</ToggleGroupItem>
           </ToggleGroup>
         </div>
 

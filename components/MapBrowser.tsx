@@ -13,7 +13,7 @@ const zoomThreshold = 6;
 
 export default function MapBrowser() {
   const [filter, setFilter] = useState<Filter>({
-    type: ['Sites'],
+    type: ['Sites', 'Unknown'],
     fee: ['Free', 'Pay', 'Unknown'],
     org: ['BLM', 'USFS', 'Unknown']
   });

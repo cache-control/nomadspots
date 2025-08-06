@@ -37,8 +37,8 @@ export default function RegionOfInterest({ filter, defaultCenter, zoomThreshold 
     {
       loading: false,
       lastPos: {
-        lat: defaultCenter[0],
-        lng: defaultCenter[1]
+        lat: 0,
+        lng: 0
       },
       spots: []
     }

@@ -40,7 +40,7 @@ function handleCopy(text: string) {
 }
 
 export default function SpotMarker({ spot }: SpotMarkerProps) {
-  let icon = iconStore.blue;
+  let icon = iconStore.grey;
   const location = `${spot.lat}, ${spot.lon}`;
   const weatherUrl = "http://forecast.weather.gov/MapClick.php"
     + `?lat=${spot.lat}&lon=${spot.lon}&site=all&smap=1`;
@@ -50,14 +50,22 @@ export default function SpotMarker({ spot }: SpotMarkerProps) {
 
   if (spot.src === "MyLocation") {
     icon = iconStore.black;
-  } else if (spot.src === "spots") {
-    icon = iconStore.gold;
-  } else if (spot.src === "iol") {
-    icon = iconStore.violet;
+  } else if (spot.type === "Water") {
+    icon = iconStore.blue;
+  } else if (spot.type === "Showers") {
+    icon = iconStore.blue;
+  } else if (spot.org === "BLM") {
+    icon = iconStore.orange;
+  } else if (spot.org === "USFS") {
+    icon = iconStore.yellow;
   } else if (spot.fee === "Free") {
     icon = iconStore.green;
   } else if (spot.fee === "Pay") {
     icon = iconStore.red;
+  } else if (spot.src === "spots") {
+    icon = iconStore.gold;
+  } else if (spot.src === "iol") {
+    icon = iconStore.violet;
   }
 
   return (

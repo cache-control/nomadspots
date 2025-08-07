@@ -37,7 +37,6 @@ export default function MapBrowser() {
         <RegionOfInterest
           filter={filter}
           zoomThreshold={zoomThreshold}
-          defaultCenter={centerOfUS}
         />
         <MyLocation />
         <ZoomSuggestion zoomThreshold={zoomThreshold} />

@@ -15,7 +15,6 @@ interface ROI {
 
 interface RegionOfInterestProps {
   filter: Filter;
-  defaultCenter: L.LatLngTuple;
   zoomThreshold: number;
 }
 
@@ -32,7 +31,7 @@ function PulsingSpinner() {
   )
 }
 
-export default function RegionOfInterest({ filter, defaultCenter, zoomThreshold }: RegionOfInterestProps) {
+export default function RegionOfInterest({ filter, zoomThreshold }: RegionOfInterestProps) {
   const [roi, setROI] = useState<ROI>(
     {
       loading: false,

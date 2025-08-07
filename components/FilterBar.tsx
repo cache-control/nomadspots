@@ -20,13 +20,15 @@ export default function FilterBar({ filter, setFilter }: FilterBarProps) {
         <div>
           <ToggleGroup
             type="multiple"
+            variant="outline"
+            className="inline-block"
             value={filter.type}
             onValueChange={val => setFilter({ ...filter, type: val })}
           >
             <ToggleGroupItem value="Sites">Sites</ToggleGroupItem>
             <ToggleGroupItem value="Water">Water</ToggleGroupItem>
             <ToggleGroupItem value="Showers">Showers</ToggleGroupItem>
-            <ToggleGroupItem value="Unknown" className="pr-5">Unknown</ToggleGroupItem>
+            <ToggleGroupItem value="Unknown">Unknown</ToggleGroupItem>
           </ToggleGroup>
         </div>
 
@@ -35,12 +37,14 @@ export default function FilterBar({ filter, setFilter }: FilterBarProps) {
         <div>
           <ToggleGroup
             type="multiple"
+            variant="outline"
+            className="inline-block"
             value={filter.fee}
             onValueChange={val => setFilter({ ...filter, fee: val })}
           >
             <ToggleGroupItem value="Free">Free</ToggleGroupItem>
             <ToggleGroupItem value="Pay">Pay</ToggleGroupItem>
-            <ToggleGroupItem value="Unknown" className="pr-5">Unknown</ToggleGroupItem>
+            <ToggleGroupItem value="Unknown">Unknown</ToggleGroupItem>
           </ToggleGroup>
         </div>
 
@@ -49,12 +53,14 @@ export default function FilterBar({ filter, setFilter }: FilterBarProps) {
         <div>
           <ToggleGroup
             type="multiple"
+            variant="outline"
+            className="inline-block"
             value={filter.org}
             onValueChange={val => setFilter({ ...filter, org: val })}
           >
             <ToggleGroupItem value="BLM">BLM</ToggleGroupItem>
             <ToggleGroupItem value="USFS">USFS</ToggleGroupItem>
-            <ToggleGroupItem className="pr-5" value="Unknown">Unknown</ToggleGroupItem>
+            <ToggleGroupItem value="Unknown">Unknown</ToggleGroupItem>
           </ToggleGroup>
         </div>
 

@@ -7,6 +7,18 @@ interface SpotMarkerProps {
   spot: Spot;
 };
 
+const iconStore = {
+  blue: getIcon("blue"),
+  gold: getIcon("gold"),
+  red: getIcon("red"),
+  green: getIcon("green"),
+  orange: getIcon("orange"),
+  yellow: getIcon("yellow"),
+  violet: getIcon("violet"),
+  grey: getIcon("grey"),
+  black: getIcon("black"),
+};
+
 // https://github.com/pointhi/leaflet-color-markers
 function getIcon(color: IconColor = "blue") {
   return new L.Icon({
@@ -28,7 +40,7 @@ function handleCopy(text: string) {
 }
 
 export default function SpotMarker({ spot }: SpotMarkerProps) {
-  let iconColor: IconColor = "blue";
+  let icon = iconStore.blue;
   const location = `${spot.lat}, ${spot.lon}`;
   const weatherUrl = "http://forecast.weather.gov/MapClick.php"
     + `?lat=${spot.lat}&lon=${spot.lon}&site=all&smap=1`;
@@ -37,20 +49,20 @@ export default function SpotMarker({ spot }: SpotMarkerProps) {
   const rating = (spot.ratings_value / spot.ratings_count).toFixed(1);
 
   if (spot.src === "MyLocation") {
-    iconColor = "black";
+    icon = iconStore.black;
   } else if (spot.src === "spots") {
-    iconColor = "gold";
+    icon = iconStore.gold;
   } else if (spot.src === "iol") {
-    iconColor = "violet";
+    icon = iconStore.violet;
   } else if (spot.fee === "Free") {
-    iconColor = "green";
+    icon = iconStore.green;
   } else if (spot.fee === "Pay") {
-    iconColor = "red";
+    icon = iconStore.red;
   }
 
   return (
     <Marker
-      icon={getIcon(iconColor)}
+      icon={icon}
       position={[spot.lat, spot.lon]}>
       <Popup closeButton={false}>
         <div className="flex items-center justify-between mb-2">

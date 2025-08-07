@@ -25,7 +25,7 @@ const SplashScreen = () => {
     return null;
 
   return (
-    <div className="absolute flex items-center inset-0 z-[400]">
+    <div className="absolute flex items-center inset-0 z-[500]">
       <div className={`
         relative flex flex-col items-center border w-full
         transition-opacity duration-500 ${opacity}

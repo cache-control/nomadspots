@@ -87,7 +87,8 @@ export default function RegionOfInterest({ filter, zoomThreshold }: RegionOfInte
           url: "https://ioverlander.com/places/" + iol.guid,
           fee: "Unknown",
           src: "iol",
-          org: "Unknown",
+          org: iol.name.includes("BLM") ? "BLM"
+            : (iol.name.includes("National Forest") ? "USFS" : "Unknown"),
           ratings_count: 1,
           ratings_value: 0,
         }))

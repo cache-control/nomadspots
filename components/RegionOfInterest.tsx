@@ -128,8 +128,6 @@ export default function RegionOfInterest({ filter, zoomThreshold }: RegionOfInte
   if (filter.type.includes("Sites"))
     typeMatches.push(
       "Established Campground",
-      "Informal Campsite",
-      "Wild Camping",
       "campsite"
     )
 

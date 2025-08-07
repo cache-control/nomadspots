@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MapContainer, TileLayer } from 'react-leaflet';
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { Plus } from 'lucide-react';
 import MyLocation from "@/components/MyLocation";
 import RegionOfInterest from "@/components/RegionOfInterest";
 import ZoomSuggestion from "@/components/ZoomSuggestion";
@@ -21,6 +22,11 @@ export default function MapBrowser() {
   return (
     <>
       <FilterBar filter={filter} setFilter={setFilter} />
+      <Plus
+        className="absolute top-1/2 left-1/2 z-[410]"
+        color="grey"
+        size={16}
+      />
       <MapContainer
         className="h-full"
         center={centerOfUS}

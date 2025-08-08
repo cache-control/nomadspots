@@ -10,7 +10,8 @@ export async function GET(req: NextRequest) {
         const lng = Number(qs.get("lng"));
         const radius = Number(qs.get("radius")) || 100;
         const sq = getSquareCorners(lat, lng, radius);
-        const userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.10 Safari/605.1.1";
+        const userAgent = req.headers.get("user-agent")
+            || "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.10 Safari/605.1.1";
 
         if (radius > 100)
             return Response.json([]);

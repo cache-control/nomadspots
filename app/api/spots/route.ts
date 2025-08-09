@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
         } else if (src === "iol") {
             const sq = getSquareCorners(lat, lng, radius);
             const url = 'https://ioverlander.com'
-                + '/places/map_search.json'
+                + '/api/maps/places.json'
                 + `?searchboxmin=${Math.floor(sq.bottomLeft.lat)},${Math.floor(sq.bottomLeft.lon)}`
                 + `&searchboxmax=${Math.floor(sq.topRight.lat)},${Math.floor(sq.topRight.lon)}`
 

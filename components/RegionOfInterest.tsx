@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useMapEvent, Pane, Rectangle } from 'react-leaflet';
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { haversine, getSquareCorners } from "@/lib/spots/utils";
-import { FreeCampsite, IOverlander, Spot } from "@/lib/spots/types";
+import { haversine, getSquareCorners, fetchSpots } from "@/lib/spots/utils";
+import type { Spot } from "@/lib/spots/types";
 import SpotMarker from "@/components/SpotMarker";
 import { Filter } from "@/components/FilterBar";
 
@@ -42,68 +42,6 @@ export default function RegionOfInterest({ filter, zoomThreshold }: RegionOfInte
       spots: []
     }
   )
-  const fetchData = async (pos: L.LatLngLiteral) => {
-    const uri = `/api/spots?lat=${pos.lat}&lng=${pos.lng}`;
-    const spots: Spot[] = [];
-
-    const [fcsResp, iolResp, spotsResp] = await Promise.allSettled(
-      [
-        fetch(uri + "&src=fcs"),
-        fetch(uri + "&src=iol&radius=75"),
-        fetch(uri + "&src=spots"),
-      ]
-    )
-
-    if (fcsResp.status === 'fulfilled') {
-      try {
-        const fcsJson = await fcsResp.value.json();
-        fcsJson.resultList.forEach((fcs: FreeCampsite) => spots.push({
-          _id: "fcs-" + fcs.id,
-          lat: fcs.latitude,
-          lon: fcs.longitude,
-          name: fcs.name,
-          desc: fcs.excerpt,
-          type: fcs.type,
-          url: fcs.url,
-          fee: fcs.type_specific.fee,
-          src: "fcs",
-          org: "Unknown",
-          ratings_count: fcs.ratings_count,
-          ratings_value: fcs.ratings_value,
-        }))
-      } catch { }
-    }
-
-    if (iolResp.status === 'fulfilled') {
-      try {
-        const iolJson = await iolResp.value.json();
-        iolJson.forEach((iol: IOverlander) => spots.push({
-          _id: "iol-" + iol.guid,
-          lat: iol.location.latitude,
-          lon: iol.location.longitude,
-          name: iol.name,
-          desc: iol.description,
-          type: iol.category,
-          url: "https://ioverlander.com/places/" + iol.guid,
-          fee: "Unknown",
-          src: "iol",
-          org: iol.name.includes("BLM") ? "BLM"
-            : (iol.name.includes("National Forest") ? "USFS" : "Unknown"),
-          ratings_count: 1,
-          ratings_value: 0,
-        }))
-      } catch { }
-    }
-
-    if (spotsResp.status === 'fulfilled') {
-      try {
-        const spotsJson = await spotsResp.value.json();
-        spotsJson.forEach((spot: Spot) => spots.push(spot))
-      } catch { }
-    }
-
-    setROI({ loading: false, lastPos: pos, spots: spots })
-  };
 
   const map = useMapEvent('moveend', () => {
     const center = map.getCenter();
@@ -112,7 +50,9 @@ export default function RegionOfInterest({ filter, zoomThreshold }: RegionOfInte
 
     if (zoomLevel >= zoomThreshold && distanceFromLastPos > 100) {
       setROI({ ...roi, loading: true })
-      fetchData(center)
+      fetchSpots(center).then(
+        spots => setROI({ loading: false, lastPos: center, spots: spots })
+      )
     }
 
   })

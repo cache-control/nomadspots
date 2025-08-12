@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MapContainer, TileLayer } from 'react-leaflet';
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { Plus } from 'lucide-react';
+import Controls from "@/components/Controls";
 import MyLocation from "@/components/MyLocation";
 import RegionOfInterest from "@/components/RegionOfInterest";
 import ZoomSuggestion from "@/components/ZoomSuggestion";
@@ -12,7 +12,22 @@ import FilterBar, { Filter } from "@/components/FilterBar";
 const centerOfUS: L.LatLngTuple = [39.8283, -98.5795];
 const zoomThreshold = 6;
 
+function PulsingSpinner() {
+  return (
+    <div className="absolute flex items-center justify-center inset-0 z-[5000]">
+      <div className="w-16 h-16 flex justify-center items-center space-x-2">
+        <div className="w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
+        <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse delay-200"></div>
+        <div className="w-4 h-4 bg-blue-600 rounded-full animate-pulse delay-400"></div>
+      </div>
+
+    </div>
+  )
+}
+
 export default function MapBrowser() {
+  const [loading, setLoading] = useState(false);
+  const [autoSearch, setAutoSearch] = useState(true);
   const [filter, setFilter] = useState<Filter>({
     type: ['Sites', 'Unknown'],
     fee: ['Free', 'Pay', 'Unknown'],
@@ -22,11 +37,12 @@ export default function MapBrowser() {
   return (
     <>
       <FilterBar filter={filter} setFilter={setFilter} />
-      <Plus
-        className="absolute top-1/2 left-1/2 z-[410]"
-        color="grey"
-        size={16}
+      <Controls
+        enable={autoSearch}
+        setAutoSearch={setAutoSearch}
       />
+      {loading && <PulsingSpinner />}
+
       <MapContainer
         className="h-full"
         center={centerOfUS}
@@ -41,6 +57,8 @@ export default function MapBrowser() {
 
         <SplashScreen />
         <RegionOfInterest
+          autoSearch={autoSearch}
+          setLoading={setLoading}
           filter={filter}
           zoomThreshold={zoomThreshold}
         />

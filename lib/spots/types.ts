@@ -98,5 +98,3 @@ export interface SquareCorners {
     lon: number;
   }
 };
-
-export type IconColor = "blue" | "gold" | "red" | "green" | "orange" | "yellow" | "violet" | "grey" | "black";

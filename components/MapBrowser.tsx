@@ -4,6 +4,7 @@ import { Map, NavigationControl } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 import type { Spot } from "@/lib/spots/types";
+import type { FetchSource } from "@/lib/spots/utils";
 import { fetchSpots } from "@/lib/spots/utils";
 import PulsingSpinner from "@/components/PulsingSpinner";
 import Controls from "@/components/Controls";
@@ -16,6 +17,7 @@ import ZoomSuggestion from "@/components/ZoomSuggestion";
 export interface IPC {
   autoSearch: boolean;
   lastCenter: LngLat;
+  loading: boolean;
   filter: Filter;
   searchOnce: boolean;
   spots: Spot[];
@@ -33,6 +35,7 @@ const centerOfUS = new LngLat(-98.5795, 39.8283);
 const ipc: IPC = {
   autoSearch: true,
   lastCenter: new LngLat(0, 0),
+  loading: false,
   searchOnce: false,
   spots: [],
   zoomLevel: 4,
@@ -59,15 +62,35 @@ function handleMoveEnd(e: ViewStateChangeEvent) {
   const zoomLevel = e.viewState.zoom;
   const milesFromLastPos = ipc.lastCenter.distanceTo(center) / 1609;
 
-  if (ipc.searchOnce || (ipc.autoSearch && zoomLevel >= zoomThreshold && milesFromLastPos > 100)) {
+  if (
+    ipc.searchOnce ||
+    (
+      ipc.loading == false && ipc.autoSearch &&
+      zoomLevel >= zoomThreshold && milesFromLastPos > 100
+    )
+  ) {
     ipc.lastCenter = center;
     ipc.searchOnce = false;
 
-    ipc.setLoading?.(true)
-    fetchSpots(center)
-      .then(spots => ipc.spots = spots)
-      .then(() => ipc.setLoading?.(false))
-      .then(() => ipc.refreshRoi?.())
+    const fetchSources: FetchSource[] = ["fcs", "iol", "spots"];
+    let fetchCount = 0;
+
+    ipc.spots = [];
+    ipc.loading = true;
+    ipc.setLoading?.(ipc.loading);
+
+    for (const src of fetchSources) {
+      fetchSpots(center, src)
+        .then(spots => ipc.spots = ipc.spots.concat(spots))
+        .then(() => fetchCount++)
+        .then(() => {
+          if (fetchCount === fetchSources.length) {
+            ipc.loading = false;
+            ipc.setLoading?.(ipc.loading);
+          }
+          ipc.refreshRoi?.();
+        })
+    }
   }
 }
 

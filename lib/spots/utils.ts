@@ -1,6 +1,8 @@
 import { LngLat } from "maplibre-gl"
 import type { FreeCampsite, IOverlander, Spot, SquareCorners } from "@/lib/spots/types";
 
+export type FetchSource = "fcs" | "iol" | "spots";
+
 export function haversine(lat1: number, lon1: number, lat2: number, lon2: number) {
   // Convert degrees to radians
   lat1 = lat1 * Math.PI / 180;
@@ -50,21 +52,14 @@ export function getSquareCorners(centerLat: number, centerLon: number, radiusMil
   };
 }
 
-export const fetchSpots = async (pos: LngLat) => {
+export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
   const uri = `/api/spots?lat=${pos.lat}&lng=${pos.lng}`;
   const spots: Spot[] = [];
 
-  const [fcsResp, iolResp, spotsResp] = await Promise.allSettled(
-    [
-      fetch(uri + "&src=fcs"),
-      fetch(uri + "&src=iol&radius=75"),
-      fetch(uri + "&src=spots"),
-    ]
-  )
-
-  if (fcsResp.status === 'fulfilled') {
+  if (src === "fcs") {
     try {
-      const fcsJson = await fcsResp.value.json();
+      const resp = await fetch(uri + "&src=fcs");
+      const fcsJson = await resp.json();
       fcsJson.resultList.forEach((fcs: FreeCampsite) => spots.push({
         _id: "fcs-" + fcs.id,
         lat: fcs.latitude,
@@ -82,9 +77,10 @@ export const fetchSpots = async (pos: LngLat) => {
     } catch { }
   }
 
-  if (iolResp.status === 'fulfilled') {
+  if (src === "iol") {
     try {
-      const iolJson = await iolResp.value.json();
+      const resp = await fetch(uri + "&src=iol");
+      const iolJson = await resp.json();
       iolJson.forEach((iol: IOverlander) => spots.push({
         _id: "iol-" + iol.guid,
         lat: iol.location.latitude,
@@ -103,9 +99,10 @@ export const fetchSpots = async (pos: LngLat) => {
     } catch { }
   }
 
-  if (spotsResp.status === 'fulfilled') {
+  if (src === "spots") {
     try {
-      const spotsJson = await spotsResp.value.json();
+      const resp = await fetch(uri + "&src=spots");
+      const spotsJson = await resp.json();
       spotsJson.forEach((spot: Spot) => spots.push(spot))
     } catch { }
   }

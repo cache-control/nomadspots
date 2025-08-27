@@ -1,4 +1,5 @@
-import type { FreeCampsite, IOverlander, Spot } from "@/lib/spots/types";
+import { LngLat } from "maplibre-gl"
+import type { FreeCampsite, IOverlander, Spot, SquareCorners } from "@/lib/spots/types";
 
 export function haversine(lat1: number, lon1: number, lat2: number, lon2: number) {
   // Convert degrees to radians
@@ -22,7 +23,7 @@ export function haversine(lat1: number, lon1: number, lat2: number, lon2: number
   return distance;
 }
 
-export function getSquareCorners(centerLat: number, centerLon: number, radiusMiles: number) {
+export function getSquareCorners(centerLat: number, centerLon: number, radiusMiles: number): SquareCorners {
   const milesPerDegreeLat = 69.0;
   const milesPerDegreeLon = 69.0 * Math.cos(centerLat * Math.PI / 180);
 
@@ -49,7 +50,7 @@ export function getSquareCorners(centerLat: number, centerLon: number, radiusMil
   };
 }
 
-export const fetchSpots = async (pos: L.LatLngLiteral) => {
+export const fetchSpots = async (pos: LngLat) => {
   const uri = `/api/spots?lat=${pos.lat}&lng=${pos.lng}`;
   const spots: Spot[] = [];
 
@@ -96,7 +97,7 @@ export const fetchSpots = async (pos: L.LatLngLiteral) => {
         src: "iol",
         org: iol.name.includes("BLM") ? "BLM"
           : (iol.name.includes("National Forest") ? "USFS" : "Unknown"),
-        ratings_count: 1,
+        ratings_count: 0,
         ratings_value: 0,
       }))
     } catch { }

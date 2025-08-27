@@ -1,70 +1,100 @@
-import { useState } from "react";
-import { MapContainer, TileLayer } from 'react-leaflet';
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+import type { ViewStateChangeEvent } from "react-map-gl/maplibre"
+import { LngLat } from 'maplibre-gl';
+import { Map, NavigationControl } from 'react-map-gl/maplibre';
+import 'maplibre-gl/dist/maplibre-gl.css';
+
+import type { Spot } from "@/lib/spots/types";
+import { fetchSpots } from "@/lib/spots/utils";
+import PulsingSpinner from "@/components/PulsingSpinner";
 import Controls from "@/components/Controls";
+import SplashScreen from "@/components/SplashScreen";
+import FilterBar, { Filter } from "@/components/FilterBar";
 import MyLocation from "@/components/MyLocation";
 import RegionOfInterest from "@/components/RegionOfInterest";
 import ZoomSuggestion from "@/components/ZoomSuggestion";
-import SplashScreen from "@/components/SplashScreen";
-import FilterBar, { Filter } from "@/components/FilterBar";
 
-const centerOfUS: L.LatLngTuple = [39.8283, -98.5795];
-const zoomThreshold = 6;
-
-function PulsingSpinner() {
-  return (
-    <div className="absolute flex items-center justify-center inset-0 z-[5000]">
-      <div className="w-16 h-16 flex justify-center items-center space-x-2">
-        <div className="w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
-        <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse delay-200"></div>
-        <div className="w-4 h-4 bg-blue-600 rounded-full animate-pulse delay-400"></div>
-      </div>
-
-    </div>
-  )
+export interface IPC {
+  autoSearch: boolean;
+  lastCenter: LngLat;
+  filter: Filter;
+  searchOnce: boolean;
+  spots: Spot[];
+  zoomLevel: number;
+  zoomThreshold: number;
+  refreshRoi: (() => void) | null;
+  refreshZoom: (() => void) | null;
+  setAutoSearch: ((state: boolean) => void) | null;
+  setLoading: ((state: boolean) => void) | null;
+  setZoomLevel: ((zoom: number) => void) | null;
 }
 
-export default function MapBrowser() {
-  const [loading, setLoading] = useState(false);
-  const [autoSearch, setAutoSearch] = useState(true);
-  const [filter, setFilter] = useState<Filter>({
+const zoomThreshold = 6;
+const centerOfUS = new LngLat(-98.5795, 39.8283);
+const ipc: IPC = {
+  autoSearch: true,
+  lastCenter: new LngLat(0, 0),
+  searchOnce: false,
+  spots: [],
+  zoomLevel: 4,
+  zoomThreshold: zoomThreshold,
+  refreshRoi: null,
+  refreshZoom: null,
+  setAutoSearch: null,
+  setLoading: null,
+  setZoomLevel: null,
+  filter: {
     type: ['Sites', 'Unknown'],
     fee: ['Free', 'Pay', 'Unknown'],
     org: ['BLM', 'USFS', 'Unknown']
-  });
+  }
+}
+const initialViewState = {
+  latitude: centerOfUS.lat,
+  longitude: centerOfUS.lng,
+  zoom: ipc.zoomLevel,
+};
+
+function handleMoveEnd(e: ViewStateChangeEvent) {
+  const center = new LngLat(e.viewState.longitude, e.viewState.latitude);
+  const zoomLevel = e.viewState.zoom;
+  const milesFromLastPos = ipc.lastCenter.distanceTo(center) / 1609;
+
+  if (ipc.searchOnce || (ipc.autoSearch && zoomLevel >= zoomThreshold && milesFromLastPos > 100)) {
+    ipc.lastCenter = center;
+    ipc.searchOnce = false;
+
+    ipc.setLoading?.(true)
+    fetchSpots(center)
+      .then(spots => ipc.spots = spots)
+      .then(() => ipc.setLoading?.(false))
+      .then(() => ipc.refreshRoi?.())
+  }
+}
+
+function handleZoomEnd(e: ViewStateChangeEvent) {
+  ipc.setZoomLevel?.(e.viewState.zoom);
+}
+
+export default function MapBrowser() {
 
   return (
     <>
-      <FilterBar filter={filter} setFilter={setFilter} />
-      <Controls
-        enable={autoSearch}
-        setAutoSearch={setAutoSearch}
-      />
-      {loading && <PulsingSpinner />}
-
-      <MapContainer
-        className="h-full"
-        center={centerOfUS}
-        zoom={5}
-        scrollWheelZoom={true}
+      <PulsingSpinner ipc={ipc} />
+      <FilterBar ipc={ipc} />
+      <Controls ipc={ipc} />
+      <SplashScreen />
+      <Map
+        initialViewState={initialViewState}
+        mapStyle="https://tiles.openfreemap.org/styles/liberty"
+        doubleClickZoom={false}
+        onZoomEnd={handleZoomEnd}
+        onMoveEnd={handleMoveEnd}
       >
-
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-
-        <SplashScreen />
-        <RegionOfInterest
-          autoSearch={autoSearch}
-          setLoading={setLoading}
-          filter={filter}
-          zoomThreshold={zoomThreshold}
-        />
+        <RegionOfInterest ipc={ipc} />
+        <NavigationControl position="top-left" showCompass={false} />
         <MyLocation />
-        <ZoomSuggestion zoomThreshold={zoomThreshold} />
-      </MapContainer>
+        <ZoomSuggestion ipc={ipc} />
+      </Map>
     </>
   );
 }

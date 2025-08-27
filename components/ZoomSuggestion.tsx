@@ -1,25 +1,31 @@
 import { useState } from "react";
-import { useMapEvent } from 'react-leaflet';
+import { useMap } from 'react-map-gl/maplibre'
+import type { IPC } from "@/components/MapBrowser";
 
 interface ZoomSuggestionProps {
-  zoomThreshold: number;
+  ipc: IPC;
 }
 
-export default function ZoomSuggestion({ zoomThreshold }: ZoomSuggestionProps) {
-  const [zoomLevel, setZoomLevel] = useState(0);
+export default function ZoomSuggestion({ ipc }: ZoomSuggestionProps) {
+  const [zoomLevel, setZoomLevel] = useState(ipc.zoomLevel)
+  const { current: map } = useMap();
 
-  const map = useMapEvent('zoomend', () => {
-    setZoomLevel(map.getZoom())
-  })
+  ipc.zoomLevel = zoomLevel;
 
-  if (zoomLevel >= zoomThreshold)
+  if (ipc.setZoomLevel === null)
+    ipc.setZoomLevel = setZoomLevel;
+
+  if (zoomLevel >= ipc.zoomThreshold)
     return null;
 
   return (
-    <div className="absolute flex justify-center w-screen bottom-10 z-[500]">
+    <div className="absolute flex justify-center w-screen bottom-10">
       <div
-        className="rounded-full shadow-lg text-white font-semibold bg-blue-500 p-3"
-        onClick={() => map.setZoom(zoomThreshold)}
+        className="select-none hover:cursor-pointer rounded-full shadow-lg text-white font-semibold bg-blue-500 p-3"
+        onClick={() => {
+          ipc.searchOnce = true;
+          map?.easeTo({ zoom: ipc.zoomThreshold })
+        }}
       >
         Zoom in to find spots
       </div>

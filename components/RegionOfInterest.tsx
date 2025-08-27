@@ -1,78 +1,57 @@
 import { useState } from "react";
-import { useMapEvent, Pane, Rectangle } from 'react-leaflet';
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import { haversine, getSquareCorners, fetchSpots } from "@/lib/spots/utils";
 import type { Spot } from "@/lib/spots/types";
+import type { IPC } from "@/components/MapBrowser";
+import { useForceUpdate } from "@/lib/spots/hooks";
+import { getSquareCorners } from "@/lib/spots/utils";
 import SpotMarker from "@/components/SpotMarker";
-import { Filter } from "@/components/FilterBar";
-
-interface ROI {
-  lastPos: L.LatLngLiteral;
-  spots: Spot[];
-}
+import SpotPopup from "@/components/SpotPopup";
+import Rectangle from "@/components/Rectangle";
 
 interface RegionOfInterestProps {
-  autoSearch: boolean;
-  filter: Filter;
-  zoomThreshold: number;
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  ipc: IPC;
 }
 
-export default function RegionOfInterest({ autoSearch, setLoading, filter, zoomThreshold }: RegionOfInterestProps) {
-  const [roi, setROI] = useState<ROI>(
-    {
-      lastPos: {
-        lat: 0,
-        lng: 0
-      },
-      spots: []
-    }
-  )
+export default function RegionOfInterest({ ipc }: RegionOfInterestProps) {
+  const forceUpdate = useForceUpdate()
+  const [spotInfo, setSpotInfo] = useState<Spot | null>(null);
 
-  const map = useMapEvent('moveend', () => {
-    const center = map.getCenter();
-    const zoomLevel = map.getZoom();
-    const distanceFromLastPos = haversine(roi.lastPos.lat, roi.lastPos.lng, center.lat, center.lng);
+  if (ipc.refreshRoi === null)
+    ipc.refreshRoi = forceUpdate;
 
-    if (autoSearch && zoomLevel >= zoomThreshold && distanceFromLastPos > 100) {
-      setLoading(true)
-      fetchSpots(center)
-        .then(spots => setROI({ lastPos: center, spots: spots }))
-        .then(() => setLoading(false))
-    }
+  const sq = getSquareCorners(ipc.lastCenter.lat, ipc.lastCenter.lng, 100);
 
-  })
+  const typeMatches: string[] = [...ipc.filter.type];
 
-  const center = map.getCenter();
-  const sq = getSquareCorners(center.lat, center.lng, 100);
-  const bounds: L.LatLngTuple[] = [
-    [sq.topLeft.lat, sq.topLeft.lon],
-    [sq.bottomRight.lat, sq.bottomRight.lon],
-  ];
-
-  const typeMatches: string[] = [...filter.type];
-
-  if (filter.type.includes("Sites"))
+  if (ipc.filter.type.includes("Sites"))
     typeMatches.push(
       "Established Campground",
       "campsite"
     )
 
-  const filteredSpots = roi.spots.filter((spot: Spot) => {
+  const filteredSpots = ipc.spots.filter((spot: Spot) => {
     return (
       typeMatches.includes(spot.type)
-      && filter.fee.includes(spot.fee)
-      && filter.org.includes(spot.org)
+      && ipc.filter.fee.includes(spot.fee)
+      && ipc.filter.org.includes(spot.org)
     )
   })
 
   return (
     <>
-      <Pane name="regionOfInterest" className="z-[500]" >
-        <Rectangle bounds={bounds} pathOptions={{ fill: false, dashArray: '5 5' }} />
-      </Pane>
-      {filteredSpots.map((spot: Spot) => <SpotMarker key={spot._id} spot={spot} />)}
+      <Rectangle bounds={sq} />
+      {filteredSpots.map((spot: Spot) =>
+        <SpotMarker
+          key={spot._id}
+          onClick={() => setSpotInfo(spot)}
+          spot={spot}
+        />
+      )}
+      {spotInfo &&
+        <SpotPopup
+          spot={spotInfo}
+          onClose={() => setSpotInfo(null)}
+        />
+      }
     </>
   )
 }

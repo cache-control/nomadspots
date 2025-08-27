@@ -46,4 +46,23 @@ export interface Spot {
   ratings_value: number;
 };
 
+export interface SquareCorners {
+  topLeft: {
+    lat: number;
+    lon: number;
+  },
+  topRight: {
+    lat: number;
+    lon: number;
+  },
+  bottomLeft: {
+    lat: number;
+    lon: number;
+  },
+  bottomRight: {
+    lat: number;
+    lon: number;
+  }
+};
+
 export type IconColor = "blue" | "gold" | "red" | "green" | "orange" | "yellow" | "violet" | "grey" | "black";

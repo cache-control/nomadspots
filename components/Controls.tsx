@@ -1,27 +1,32 @@
+import { useState } from "react";
 import { Plus, Radar } from 'lucide-react';
+import type { IPC } from "@/components/MapBrowser";
 
 interface ControlProps {
-  enable: boolean;
-  setAutoSearch: React.Dispatch<React.SetStateAction<boolean>>;
+  ipc: IPC;
 }
 
-export default function Controls({ enable, setAutoSearch }: ControlProps) {
+export default function Controls({ ipc }: ControlProps) {
+  const [autoSearch, setAutoSearch] = useState(true);
+
+  ipc.autoSearch = autoSearch;
+
+  if (ipc.setAutoSearch === null)
+    ipc.setAutoSearch = setAutoSearch;
 
   return (
     <>
       <Radar
-        className="absolute top-20 left-3 z-[410]"
+        className="absolute top-20 left-2 hover:cursor-pointer z-10"
         size={32}
-        color={enable ? "black" : "grey"}
-        onClick={() => {
-          setAutoSearch(prev => !prev)
-        }}
+        color={autoSearch ? "black" : "grey"}
+        onClick={() => setAutoSearch(prev => !prev)}
       />
 
       <Plus
-        className="absolute top-1/2 left-1/2 z-[410]"
+        className="absolute top-1/2 left-1/2 z-10"
         color="grey"
-        size={16}
+        size={20}
       />
     </>
   )

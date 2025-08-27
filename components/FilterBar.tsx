@@ -1,4 +1,6 @@
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { IPC } from "@/components/MapBrowser";
+import { useForceUpdate } from "@/lib/spots/hooks";
 
 export interface Filter {
   type: string[];
@@ -7,14 +9,19 @@ export interface Filter {
 }
 
 export interface FilterBarProps {
-  filter: Filter;
-  setFilter: React.Dispatch<React.SetStateAction<Filter>>;
+  ipc: IPC;
 }
 
-export default function FilterBar({ filter, setFilter }: FilterBarProps) {
+export default function FilterBar({ ipc }: FilterBarProps) {
+  const forceUpdate = useForceUpdate();
+
+  function notifyRoi() {
+    forceUpdate();
+    ipc.refreshRoi?.();
+  }
 
   return (
-    <div className="bg-white absolute top-3 left-15 rounded-md right-5 z-[1000] p-3">
+    <div className="bg-white absolute top-3 left-15 rounded-md right-5 z-10 p-3">
       <div className="flex flex-row overflow-x-auto whitespace-nowrap scrollbar-hide justify-start gap-3 items-center w-full">
 
         <div>
@@ -22,8 +29,11 @@ export default function FilterBar({ filter, setFilter }: FilterBarProps) {
             type="multiple"
             variant="outline"
             className="inline-block"
-            value={filter.type}
-            onValueChange={val => setFilter({ ...filter, type: val })}
+            value={ipc.filter.type}
+            onValueChange={val => {
+              ipc.filter.type = val;
+              notifyRoi();
+            }}
           >
             <ToggleGroupItem value="Sites">Sites</ToggleGroupItem>
             <ToggleGroupItem value="Water">Water</ToggleGroupItem>
@@ -39,8 +49,11 @@ export default function FilterBar({ filter, setFilter }: FilterBarProps) {
             type="multiple"
             variant="outline"
             className="inline-block"
-            value={filter.fee}
-            onValueChange={val => setFilter({ ...filter, fee: val })}
+            value={ipc.filter.fee}
+            onValueChange={val => {
+              ipc.filter.fee = val;
+              notifyRoi()
+            }}
           >
             <ToggleGroupItem value="Free">Free</ToggleGroupItem>
             <ToggleGroupItem value="Pay">Pay</ToggleGroupItem>
@@ -55,8 +68,11 @@ export default function FilterBar({ filter, setFilter }: FilterBarProps) {
             type="multiple"
             variant="outline"
             className="inline-block"
-            value={filter.org}
-            onValueChange={val => setFilter({ ...filter, org: val })}
+            value={ipc.filter.org}
+            onValueChange={val => {
+              ipc.filter.org = val;
+              notifyRoi();
+            }}
           >
             <ToggleGroupItem value="BLM">BLM</ToggleGroupItem>
             <ToggleGroupItem value="USFS">USFS</ToggleGroupItem>

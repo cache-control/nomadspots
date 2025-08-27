@@ -1,7 +1,13 @@
 import { LngLat } from "maplibre-gl"
-import type { FreeCampsite, IOverlander, Spot, SquareCorners } from "@/lib/spots/types";
+import type {
+  FreeCampsite,
+  IOverlander,
+  RecreationGov,
+  Spot,
+  SquareCorners
+} from "@/lib/spots/types";
 
-export type FetchSource = "fcs" | "iol" | "spots";
+export type FetchSource = "fcs" | "iol" | "recgov" | "spots";
 
 export function haversine(lat1: number, lon1: number, lat2: number, lon2: number) {
   // Convert degrees to radians
@@ -95,6 +101,34 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
           : (iol.name.includes("National Forest") ? "USFS" : "Unknown"),
         ratings_count: 0,
         ratings_value: 0,
+      }))
+    } catch { }
+  }
+
+  if (src === "recgov") {
+    try {
+      const sq = getSquareCorners(pos.lat, pos.lng, 100);
+      const url = "https://www.recreation.gov/api/search/geo?exact=false"
+        + `&lat_sw=${sq.bottomLeft.lat}&lng_sw=${sq.bottomLeft.lon}`
+        + `&lat_ne=${sq.topRight.lat}&lng_ne=${sq.topRight.lon}`
+        + "&size=200&fq=-entity_type%3A(tour%20OR%20timedentry_tour)&fg=camping&sort=available&start=0"
+      const resp = await fetch(url);
+      const json = await resp.json();
+
+      json.results?.map((camp: RecreationGov) => spots.push({
+        _id: "recgov-" + camp.id,
+        lat: parseFloat(camp.latitude),
+        lon: parseFloat(camp.longitude),
+        name: camp.name,
+        desc: camp.description,
+        type: camp.entity_type === "campground" ? "campsite" : camp.entity_type,
+        url: "https://www.recreation.gov/camping/campgrounds/" + camp.entity_id,
+        fee: camp.price_range?.amount_max === 0 ? "Free" : "Unknown",
+        src: "recgov",
+        org: camp.org_name.includes("Bureau of Land Management") ? "BLM"
+          : (camp.org_name.includes("USDA Forest Service") ? "USFS" : "Unknown"),
+        ratings_count: camp.number_of_ratings,
+        ratings_value: camp.average_rating * camp.number_of_ratings,
       }))
     } catch { }
   }

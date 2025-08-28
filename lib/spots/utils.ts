@@ -123,7 +123,8 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
         desc: camp.description,
         type: camp.entity_type === "campground" ? "campsite" : camp.entity_type,
         url: "https://www.recreation.gov/camping/campgrounds/" + camp.entity_id,
-        fee: camp.price_range?.amount_max === 0 ? "Free" : "Unknown",
+        fee: camp.price_range?.amount_max >= 0 ? "Pay"
+          : (camp.price_range?.amount_max === 0 ? "Free" : "Unknown"),
         src: "recgov",
         org: camp.org_name.includes("Bureau of Land Management") ? "BLM"
           : (camp.org_name.includes("USDA Forest Service") ? "USFS" : "Unknown"),

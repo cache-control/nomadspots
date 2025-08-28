@@ -20,7 +20,10 @@ export default function Controls({ ipc }: ControlProps) {
         className="absolute top-20 left-2 hover:cursor-pointer z-10"
         size={32}
         color={autoSearch ? "black" : "grey"}
-        onClick={() => setAutoSearch(prev => !prev)}
+        onClick={() => {
+          setAutoSearch(prev => !prev)
+          ipc.setZoomLevel?.(ipc.zoomLevel + 1e-9);
+        }}
       />
 
       <Plus

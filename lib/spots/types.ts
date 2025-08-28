@@ -1,68 +1,93 @@
 export interface FreeCampsite {
-  id: number;
-  name: string;
-  type: string;
-  latitude: number;
-  longitude: number;
-  url: string;
-  city: string;
-  county: string;
-  region: string;
-  country: string;
-  excerpt: string;
-  type_specific: {
-    fee: string;
-  },
-  ratings_count: number;
-  ratings_value: number;
+  "id": number;
+  "type": string;
+  "name": string;
+  "latitude": number;
+  "longitude": number;
+  "distance": number;
+  "url": string;
+  "city": string;
+  "county": string;
+  "region": string;
+  "country": string;
+  "excerpt": string;
+  "rating": string;
+  "ratings_average": number;
+  "ratings_count": number;
+  "ratings_value": number;
+  "type_specific": {
+    "icon": string;
+    "amenities": string;
+    "activities": string;
+    "fee": string;
+  };
+  "table_row": string;
 };
 
 export interface IOverlander {
-  guid: string;
-  name: string;
-  description: string;
-  date_verified: string;
-  country: string;
-  category: string;
-  location: {
-    latitude: number;
-    longitude: number;
-    altitude: number;
+  "guid": string;
+  "name": string;
+  "description": string;
+  "date_verified": string;
+  "amenities": {
+    "Surroundings": string;
+    "Spot Type": string;
+    "Wifi": string;
+    "Restaurant": string;
+    "Showers": string;
+    "Water": string;
+    "Toilets": string;
+    "Big Rig Friendly": string;
+    "Tent Friendly": string;
+    "Pet Friendly": string;
+  };
+  "category_icon_path": string;
+  "category_icon_pin_path": string;
+  "category_icon_pin_closed_path": string;
+  "country": string;
+  "category": string;
+  "open": string;
+  "location": {
+    "latitude": number;
+    "longitude": number;
+    "altitude": number;
+    "horizontal_accuracy": number;
+    "vertical_accuracy": number;
   }
-};
+}
 
 export interface RecreationGov {
-  accessible_campsites_count: number;
-  aggregate_cell_coverage: number;
-  average_rating: number;
-  campsite_accessible: number;
-  campsite_reserve_type: string[];
-  campsite_type_of_use: string[];
-  campsites_count: string;
-  city: string;
-  country_code: string;
-  description: string;
-  entity_id: string;
-  entity_type: string;
-  go_live_date: string;
-  id: string;
-  latitude: string;
-  longitude: string;
-  name: string;
-  number_of_ratings: number;
-  org_id: string;
-  org_name: string;
-  parent_id: string;
-  parent_name: string;
-  preview_image_url: string;
-  price_range: {
-    amount_max: number;
-    amount_min: number;
-    per_unit: string;
-  },
-  reservable: boolean;
-  state_code: string;
-  type: string;
+  "accessible_campsites_count": number;
+  "aggregate_cell_coverage": number;
+  "average_rating": number;
+  "campsite_accessible": number;
+  "campsite_reserve_type": string[];
+  "campsite_type_of_use": string[];
+  "campsites_count": string;
+  "city": string;
+  "country_code": string;
+  "description": string;
+  "entity_id": string;
+  "entity_type": string;
+  "go_live_date": string;
+  "id": string;
+  "latitude": string;
+  "longitude": string;
+  "name": string;
+  "number_of_ratings": number;
+  "org_id": string;
+  "org_name": string;
+  "parent_id": string;
+  "parent_name": string;
+  "preview_image_url": string;
+  "price_range": {
+    "amount_max": number;
+    "amount_min": number;
+    "per_unit": string;
+  };
+  "reservable": boolean;
+  "state_code": string;
+  "type": string;
 };
 
 export interface Spot {

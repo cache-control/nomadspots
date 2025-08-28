@@ -28,9 +28,11 @@ export default function SpotMarker({ spot, onClick }: SpotMarkerProps) {
   } else if (spot.type === "Showers") {
     icon = <ShowerHead {...iconProps} fill="blue" />
   } else if (spot.org === "BLM") {
-    icon = <Mountain {...iconProps} fill="brown" />
+    const color = spot.fee === "Pay" ? "red" : "brown";
+    icon = <Mountain {...iconProps} fill={color} />
   } else if (spot.org === "USFS") {
-    icon = <TreePine {...iconProps} fill="green" />
+    const color = spot.fee === "Pay" ? "red" : "green";
+    icon = <TreePine {...iconProps} fill={color} />
   } else if (spot.fee === "Free") {
     markerColor = "green"
   } else if (spot.fee === "Pay") {

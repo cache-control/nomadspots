@@ -93,7 +93,7 @@ export interface RecreationGov {
 export interface Spot {
   _id: string;
   name: string;
-  desc: string;
+  description: string;
   type: string;
   lat: number;
   lon: number;

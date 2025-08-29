@@ -17,7 +17,7 @@ export default function MyLocation() {
             {
               _id: "MyLocation",
               name: "My Location",
-              desc: "",
+              description: "",
               type: "",
               lat: coords.latitude,
               lon: coords.longitude,

@@ -1,7 +1,7 @@
 [
   {
     "name": "BLM Camping-",
-    "desc": "Free primitive camping located next to major freeway but the noise is not overwhelming.",
+    "description": "Free primitive camping located next to major freeway but the noise is not overwhelming.",
     "url": "https://www.google.com/maps/place/BLM+Camping-/data=!4m2!3m1!1s0x80d15956659f7cc9:0xcbe63b5f16ec29a5",
     "lat": 33.6657446,
     "lon": -114.1870893,
@@ -14,7 +14,7 @@
   },
   {
     "name": "Pump Station BLM",
-    "desc": "Very spacious, clean, free dry camping spaces.",
+    "description": "Very spacious, clean, free dry camping spaces.",
     "url": "https://www.google.com/maps/place/Pump+Station+BLM/data=!4m2!3m1!1s0x86d5ef999efa2ee1:0x92b258e2cc8030f5",
     "lat": 32.44468,
     "lon": -111.37206,
@@ -27,7 +27,7 @@
   },
   {
     "name": "Grand Canyon Trail Rides",
-    "desc": "This marker location is a business. Do not go there.  It's only being used to mark the forest road (328) that has camping spots.",
+    "description": "This marker location is a business. Do not go there.  It's only being used to mark the forest road (328) that has camping spots.",
     "url": "https://www.google.com/maps/place/Apache+Stables/data=!4m2!3m1!1s0x87331bddd193120d:0x9a863c919999f2c5",
     "lat": 35.9860515,
     "lon": -112.130026,
@@ -40,7 +40,7 @@
   },
   {
     "name": "Long Jim Loop Camping",
-    "desc": "Simple forested campground in Grand Canyon National Park offering tent & RV sites.",
+    "description": "Simple forested campground in Grand Canyon National Park offering tent & RV sites.",
     "url": "https://www.google.com/maps/place/Long+Jim+Loop+Camping/data=!4m2!3m1!1s0x87331bc2da4184df:0xc65d3dee8a61ad04",
     "lat": 35.979025,
     "lon": -112.1302508,
@@ -53,7 +53,7 @@
   },
   {
     "name": "BLM Sacred White Shell Mountain",
-    "desc": "Free dry camping near Great Sand Dunes NP.",
+    "description": "Free dry camping near Great Sand Dunes NP.",
     "url": "https://www.google.com/maps/place/BLM+Sacred+White+Shell+Mountain/data=!4m2!3m1!1s0x871684a90df1cae1:0x48aacdafd50521be",
     "lat": 37.5218933,
     "lon": -105.6019771,
@@ -66,7 +66,7 @@
   },
   {
     "name": "Parking Lot for Chutes & Ladders",
-    "desc": "Designated camping spots near Mesa Verde NP. Nearby is a rest stop with flushing toilets.",
+    "description": "Designated camping spots near Mesa Verde NP. Nearby is a rest stop with flushing toilets.",
     "url": "https://www.google.com/maps/place/Parking+Lot+for+Chutes+%26+Ladders/data=!4m2!3m1!1s0x87396930a71227b7:0x52c4706c7ca6b74f",
     "lat": 37.3600915,
     "lon": -108.4311058,
@@ -79,7 +79,7 @@
   },
   {
     "name": "Lake DeWeese",
-    "desc": "Reflecting magnificent peaks, DeWeese Reservoir State Wildlife Area backs up behind an impressive dam at the head of Grape Creek Canyon, just a half-dozen miles north of Westcliffe. The wildlife area encompasses 2,336 acres, with the reservoir covering 208.",
+    "description": "Reflecting magnificent peaks, DeWeese Reservoir State Wildlife Area backs up behind an impressive dam at the head of Grape Creek Canyon, just a half-dozen miles north of Westcliffe. The wildlife area encompasses 2,336 acres, with the reservoir covering 208.",
     "url": "https://www.google.com/maps/place/Lake+DeWeese/data=!4m2!3m1!1s0x87145c2bb220812d:0xac322dbe28559b57",
     "lat": 38.204515,
     "lon": -105.4574374,
@@ -92,7 +92,7 @@
   },
   {
     "name": "Campo Community Center",
-    "desc": "Free RV parking at the park.",
+    "description": "Free RV parking at the park.",
     "url": "https://www.google.com/maps/place/Campo+Community+Center/data=!4m2!3m1!1s0x870f1057afc755b1:0xdd23ee224e8241dc",
     "lat": 37.1027452,
     "lon": -102.5783402,
@@ -105,7 +105,7 @@
   },
   {
     "name": "Stillwater Pass",
-    "desc": "Free dispersed camping, near Grand Lake and Stillwater campground.",
+    "description": "Free dispersed camping, near Grand Lake and Stillwater campground.",
     "url": "https://www.google.com/maps/place/Stillwater+Pass/data=!4m2!3m1!1s0x8769874778d47537:0xe9a43c3604b3de5c",
     "lat": 40.2149801,
     "lon": -105.8858461,
@@ -118,7 +118,7 @@
   },
   {
     "name": "Williams Fork Reservoir Campground",
-    "desc": "Camping is allowed from April 1 through Nov. 30 in designated areas.",
+    "description": "Camping is allowed from April 1 through Nov. 30 in designated areas.",
     "url": "https://www.google.com/maps/place/Williams+Fork+Reservoir+Campground/data=!4m2!3m1!1s0x876a19847f7770a3:0x3893601652e2d0d4",
     "lat": 40.0195363,
     "lon": -106.2002175,
@@ -131,7 +131,7 @@
   },
   {
     "name": "Gordon Gulch Dispersed Camping Area, CO",
-    "desc": "There are 15 numbered, designated campsites scattered along the road system within 1.5 miles east of Highway 72. Camping is permitted in designated sites only.",
+    "description": "There are 15 numbered, designated campsites scattered along the road system within 1.5 miles east of Highway 72. Camping is permitted in designated sites only.",
     "url": "https://www.google.com/maps/place/Gordon+Gulch+Dispersed+Camping+Area,+CO/data=!4m2!3m1!1s0x876bc3f55c43ad55:0xeab8828013ddc53a",
     "lat": 40.010122,
     "lon": -105.5000589,
@@ -144,7 +144,7 @@
   },
   {
     "name": "Danbory Rest Area",
-    "desc": "Rest areas and service plazas",
+    "description": "Rest areas and service plazas",
     "url": "https://www.google.com/maps/place/Danbory+Rest+Area/data=!4m2!3m1!1s0x89dd54fbf756e6dd:0x38b9ad4994711dba",
     "lat": 41.3894065,
     "lon": -73.5185187,
@@ -157,7 +157,7 @@
   },
   {
     "name": "Biden Welcome Center",
-    "desc": "Great welcome center. Lots of bathroom stalls.",
+    "description": "Great welcome center. Lots of bathroom stalls.",
     "url": "https://www.google.com/maps/place/Biden+Welcome+Center/data=!4m2!3m1!1s0x89c7074a9140ca21:0x3b3ca54065cfe65b",
     "lat": 39.6622566,
     "lon": -75.6912653,
@@ -170,7 +170,7 @@
   },
   {
     "name": "Midway Campground",
-    "desc": "Campground near Everglades NP. Next to highway but is quiet at night.",
+    "description": "Campground near Everglades NP. Next to highway but is quiet at night.",
     "url": "https://www.google.com/maps/place/Midway+Campground/data=!4m2!3m1!1s0x88da3cab73e09f71:0xda7ef5ec090b63e3",
     "lat": 25.8508957,
     "lon": -80.9895179,
@@ -183,7 +183,7 @@
   },
   {
     "name": "Spillway Campground",
-    "desc": "The Spillway Campground is a small campground with 3 campsites along Anderson Ranch Reservoir.  The reservoir is a popular destination for fishing, boating, waterskiing and riding personal watercraft.",
+    "description": "The Spillway Campground is a small campground with 3 campsites along Anderson Ranch Reservoir.  The reservoir is a popular destination for fishing, boating, waterskiing and riding personal watercraft.",
     "url": "https://www.google.com/maps/place/Spillway+Campground/data=!4m2!3m1!1s0x54aea17ba3cfc5d5:0x5d81cae2bd9a9808",
     "lat": 43.35724,
     "lon": -115.44747,
@@ -196,7 +196,7 @@
   },
   {
     "name": "Little Camas Reservoir Campground",
-    "desc": "Free dispersed camping with pit toilets.",
+    "description": "Free dispersed camping with pit toilets.",
     "url": "https://www.google.com/maps/place/Little+Camas+Reservoir+Campground/data=!4m2!3m1!1s0x54aea1a305b7d883:0x8ebbdd5031a56383",
     "lat": 43.3477663,
     "lon": -115.3906854,
@@ -209,7 +209,7 @@
   },
   {
     "name": "Jacks Creek Campground",
-    "desc": "An open access site with no amenities, has pit toilets.",
+    "description": "An open access site with no amenities, has pit toilets.",
     "url": "https://www.google.com/maps/place/Jacks+Creek+Campground/data=!4m2!3m1!1s0x54adc70b71cebc9d:0x80a89498f7fdf5de",
     "lat": 42.9028201,
     "lon": -115.8653837,
@@ -222,7 +222,7 @@
   },
   {
     "name": "Tower Rock Campground, Shawnee National Forest",
-    "desc": "Located along the banks of the Ohio River, Tower Rock Campground offers beautiful scenery and close proximity to water activities like fishing and boating.",
+    "description": "Located along the banks of the Ohio River, Tower Rock Campground offers beautiful scenery and close proximity to water activities like fishing and boating.",
     "url": "https://www.google.com/maps/place/Tower+Rock+Campground,+Shawnee+National+Forest/data=!4m2!3m1!1s0x887088a6e8772aa5:0x9cf81673131a27ba",
     "lat": 37.4583352,
     "lon": -88.232835,
@@ -235,7 +235,7 @@
   },
   {
     "name": "Turkey Bayou",
-    "desc": "Located in Oakwood Bottoms, Turkey Bayou Campground is a great location outdoor activities including waterfowl hunting, deer hunting, trapping, fishing, nature watching and bird watching.",
+    "description": "Located in Oakwood Bottoms, Turkey Bayou Campground is a great location outdoor activities including waterfowl hunting, deer hunting, trapping, fishing, nature watching and bird watching.",
     "url": "https://www.google.com/maps/place/Turkey+Bayou/data=!4m2!3m1!1s0x8877a08962d45559:0xa6b1d4e7faa1c671",
     "lat": 37.685,
     "lon": -89.41139,
@@ -248,7 +248,7 @@
   },
   {
     "name": "Dutchman Lake",
-    "desc": "A beautiful undeveloped lake in Shawnee Forest, has a boat ramp,  good place to fish or just sit quietly and meditate.",
+    "description": "A beautiful undeveloped lake in Shawnee Forest, has a boat ramp,  good place to fish or just sit quietly and meditate.",
     "url": "https://www.google.com/maps/place/Dutchman+Lake/data=!4m2!3m1!1s0x88774fcca6169bb9:0x61f8482d93612b42",
     "lat": 37.4900091,
     "lon": -88.9125775,
@@ -261,7 +261,7 @@
   },
   {
     "name": "Dunewood Campground",
-    "desc": "Campground consists of two loops containing 66 camp-sites (53 conventional drive-in sites and 13 walk/carry-in sites).",
+    "description": "Campground consists of two loops containing 66 camp-sites (53 conventional drive-in sites and 13 walk/carry-in sites).",
     "url": "https://www.google.com/maps/place/Dunewood+Campground/data=!4m2!3m1!1s0x8811a4280e1cb64b:0x2adf47d87854a167",
     "lat": 41.6709273,
     "lon": -86.9828659,
@@ -274,7 +274,7 @@
   },
   {
     "name": "Concannon Wildlife Area",
-    "desc": "The area offers a large variety of recreational opportunities to the visitors. Primitive camping is allowed in an area that has ADA restrooms, an ADA courtesy dock, and a boat ramp.",
+    "description": "The area offers a large variety of recreational opportunities to the visitors. Primitive camping is allowed in an area that has ADA restrooms, an ADA courtesy dock, and a boat ramp.",
     "url": "https://www.google.com/maps/place/Concannon+Wildlife+Area/data=!4m2!3m1!1s0x87a757bbc27159b9:0x67c3a5e1ed78ddde",
     "lat": 38.069775,
     "lon": -100.559075,
@@ -287,7 +287,7 @@
   },
   {
     "name": "Bourbon State Fishing Lake",
-    "desc": "This lake is a little off the beaten path but an amazing place to camp. Camping is free and they have a water spout and a pit bathroom available.",
+    "description": "This lake is a little off the beaten path but an amazing place to camp. Camping is free and they have a water spout and a pit bathroom available.",
     "url": "https://www.google.com/maps/place/Bourbon+State+Fishing+Lake/data=!4m2!3m1!1s0x87b87f4fc7e573a1:0xe97cb79532f70fca",
     "lat": 37.7894743,
     "lon": -95.0716162,
@@ -300,7 +300,7 @@
   },
   {
     "name": "Kiowa County State Lake",
-    "desc": "Free camping in a park with a lake inside a city. It can get noisy because of traffic and trains.",
+    "description": "Free camping in a park with a lake inside a city. It can get noisy because of traffic and trains.",
     "url": "https://www.google.com/maps/place/Kiowa+County+State+Lake/data=!4m2!3m1!1s0x87a687341173c0b5:0x2e4b840d4cfb5eab",
     "lat": 37.6122467,
     "lon": -99.3008256,
@@ -313,7 +313,7 @@
   },
   {
     "name": "Bullitt County Welcome Center Southbound",
-    "desc": "Unbelievably clean and safe rest area.",
+    "description": "Unbelievably clean and safe rest area.",
     "url": "https://www.google.com/maps/place/Bullitt+County+Welcome+Center+Southbound/data=!4m2!3m1!1s0x886903d3fc06ec8b:0xbed12c1c343466c1",
     "lat": 37.9470833,
     "lon": -85.6900596,
@@ -326,7 +326,7 @@
   },
   {
     "name": "SB Horse Cave Rest Area",
-    "desc": "Clean restrooms. Ample parking. Safe.",
+    "description": "Clean restrooms. Ample parking. Safe.",
     "url": "https://www.google.com/maps/place/SB+Horse+Cave+Rest+Area/data=!4m2!3m1!1s0x88689fbd64781af9:0x6d568a7edf7cf6d9",
     "lat": 37.2389856,
     "lon": -85.9296016,
@@ -339,7 +339,7 @@
   },
   {
     "name": "Little Lick Campground",
-    "desc": "Little Lick Horse Camp is a primitive equestrian campground with four family camping areas and two double campsites located on a long ridgetop in the southeast corner of Pulaski County.",
+    "description": "Little Lick Horse Camp is a primitive equestrian campground with four family camping areas and two double campsites located on a long ridgetop in the southeast corner of Pulaski County.",
     "url": "https://www.google.com/maps/place/Little+Lick+Campground/data=!4m2!3m1!1s0x885d2509b5266ba5:0x7dffad4aab330b64",
     "lat": 36.9632214,
     "lon": -84.3988177,
@@ -352,7 +352,7 @@
   },
   {
     "name": "Salem Lake",
-    "desc": "There is free 2 day camping. Saw some GIANT fish in the lake.",
+    "description": "There is free 2 day camping. Saw some GIANT fish in the lake.",
     "url": "https://www.google.com/maps/place/Salem+Lake/data=!4m2!3m1!1s0x8868f3102dfd1ccd:0xadf7fb67f9755aa3",
     "lat": 37.592472,
     "lon": -85.7128067,
@@ -365,7 +365,7 @@
   },
   {
     "name": "Dogwood Campground",
-    "desc": "Easy access to the district and spring dogwood blooms make this campground a popular destination for visitors who want to cover the whole district. Camping (16 drive-in units accessible to small RV's and trailers), drinking water, and sanitary facilities (flush toilets). Trash disposal available.",
+    "description": "Easy access to the district and spring dogwood blooms make this campground a popular destination for visitors who want to cover the whole district. Camping (16 drive-in units accessible to small RV's and trailers), drinking water, and sanitary facilities (flush toilets). Trash disposal available.",
     "url": "https://www.google.com/maps/place/Dogwood+Campground/data=!4m2!3m1!1s0x863a7be6ddf3ddc7:0x915fdda77ee0abb9",
     "lat": 31.4928945,
     "lon": -93.1933409,
@@ -378,7 +378,7 @@
   },
   {
     "name": "Sam Forse Collins Recreation Area",
-    "desc": "This park has group facilities, playground equipment, a boat ramp, picnic tables, a wheelchair-accessible fishing pier, and restrooms. There are no usage fees.",
+    "description": "This park has group facilities, playground equipment, a boat ramp, picnic tables, a wheelchair-accessible fishing pier, and restrooms. There are no usage fees.",
     "url": "https://www.google.com/maps/place/Sam+Forse+Collins+Recreation+Area/data=!4m2!3m1!1s0x863a231f9998fa61:0xb22aed441990160b",
     "lat": 31.1653302,
     "lon": -93.5783479,
@@ -391,7 +391,7 @@
   },
   {
     "name": "Ahtus Melder Campground",
-    "desc": "A very peaceful unique free camping area on what remains of a 1940s military base.",
+    "description": "A very peaceful unique free camping area on what remains of a 1940s military base.",
     "url": "https://www.google.com/maps/place/Ahtus+Melder+Campground/data=!4m2!3m1!1s0x863acfb336c52873:0x1e8ebbb052df1436",
     "lat": 31.084067,
     "lon": -92.579672,
@@ -404,7 +404,7 @@
   },
   {
     "name": "Camping Area",
-    "desc": "Nice camping area. Quiet and peaceful. Nice shade. Clean restroom.",
+    "description": "Nice camping area. Quiet and peaceful. Nice shade. Clean restroom.",
     "url": "https://www.google.com/maps/place/Camping+Area/data=!4m2!3m1!1s0x863a57da9753e7ef:0x430600b01b8782fe",
     "lat": 31.0085132,
     "lon": -93.1061784,
@@ -417,7 +417,7 @@
   },
   {
     "name": "Trout Brook Campsites",
-    "desc": "It is free. First come first serve. Wilderness camp site. You may need to call the state and get a fire permit.",
+    "description": "It is free. First come first serve. Wilderness camp site. You may need to call the state and get a fire permit.",
     "url": "https://www.google.com/maps/place/Trout+Brook+Campsites/data=!4m2!3m1!1s0x4cb0e135118afb9b:0x99721b866024279f",
     "lat": 45.1734305,
     "lon": -70.4115037,
@@ -430,7 +430,7 @@
   },
   {
     "name": "Maine’s Bureau of Parks and Lands Primative Campground",
-    "desc": "Gorgeous scenery and perfect for paddling. A good place to visit for a day or to camp with family or friends.",
+    "description": "Gorgeous scenery and perfect for paddling. A good place to visit for a day or to camp with family or friends.",
     "url": "https://www.google.com/maps/place/Maine%E2%80%99s+Bureau+of+Parks+and+Lands+Primative+Campground/data=!4m2!3m1!1s0x4cb0cdb68d19f2e9:0x2787daca800bc316",
     "lat": 45.326932,
     "lon": -70.6491029,
@@ -443,7 +443,7 @@
   },
   {
     "name": "Swains Lock Hiker/Biker Campsite",
-    "desc": "Potable water may not be available at each campsite. Water is treated with iodine. Please plan to have water purification tablets with you.",
+    "description": "Potable water may not be available at each campsite. Water is treated with iodine. Please plan to have water purification tablets with you.",
     "url": "https://www.google.com/maps/place/Swains+Lock+Hiker%2FBiker+Campsite/data=!4m2!3m1!1s0x89b6347f67746383:0xa2315986b687d96",
     "lat": 39.0313939,
     "lon": -77.2448638,
@@ -456,7 +456,7 @@
   },
   {
     "name": "Sulak Campground",
-    "desc": "This site is primarily used by anglers, hunters and families for camping.",
+    "description": "This site is primarily used by anglers, hunters and families for camping.",
     "url": "https://www.google.com/maps/place/Sulak+Campground/data=!4m2!3m1!1s0x881ebbd889ff68d7:0x7fa0e1b92c836034",
     "lat": 43.9243689,
     "lon": -86.0131109,
@@ -469,7 +469,7 @@
   },
   {
     "name": "Sparrow Rapids Campground",
-    "desc": "This campgrouind has six campsites that can accomodate tents, trailers, and motor homes. It is a limited service campground.",
+    "description": "This campgrouind has six campsites that can accomodate tents, trailers, and motor homes. It is a limited service campground.",
     "url": "https://www.google.com/maps/place/Sparrow+Rapids+Campground/data=!4m2!3m1!1s0x4d56b8a3ae7175dd:0x23a67f95c6577227",
     "lat": 46.5044754,
     "lon": -88.9480693,
@@ -482,7 +482,7 @@
   },
   {
     "name": "French Farm Lake",
-    "desc": "Last lake in the Lower Peninsula before you get to the bridge and in fact, you can see the Mackinac Bridge from the south side of the lake.",
+    "description": "Last lake in the Lower Peninsula before you get to the bridge and in fact, you can see the Mackinac Bridge from the south side of the lake.",
     "url": "https://www.google.com/maps/place/French+Farm+Lake/data=!4m2!3m1!1s0x4d358a6265ba412f:0x5443bbf0e9ffc3bc",
     "lat": 45.7439906,
     "lon": -84.7673298,
@@ -495,7 +495,7 @@
   },
   {
     "name": "Hovey Lake Campground",
-    "desc": "This isolated, quiet, family type camping area is located on the east side of Hovey Lake. It is a good place for canoeing, bird watching or just enjoying nature surroundings. There are four campsites, each with a table and fire ring. Toilets and drinking water are available.",
+    "description": "This isolated, quiet, family type camping area is located on the east side of Hovey Lake. It is a good place for canoeing, bird watching or just enjoying nature surroundings. There are four campsites, each with a table and fire ring. Toilets and drinking water are available.",
     "url": "https://www.google.com/maps/place/Hovey+Lake+Campground/data=!4m2!3m1!1s0x4d4e8645e5c3de8f:0x12d4b139e1d5afe",
     "lat": 46.2905062,
     "lon": -86.7009877,
@@ -508,7 +508,7 @@
   },
   {
     "name": "Echo Lake Campground",
-    "desc": "Echo Lake is located on the west end of the Echo Trail, a remote country road that traverses through the heart of the Western Superior National Forest.",
+    "description": "Echo Lake is located on the west end of the Echo Trail, a remote country road that traverses through the heart of the Western Superior National Forest.",
     "url": "https://www.google.com/maps/place/Echo+Lake+Campground/data=!4m2!3m1!1s0x52a4db819b57de5d:0x9bf16a086e188c05",
     "lat": 48.1705556,
     "lon": -92.4911111,
@@ -521,7 +521,7 @@
   },
   {
     "name": "Ash River Campground",
-    "desc": "A perfectly fine car camping spot. Just the space to pull in, a tent pad, fire ring & pit toilets. Nothing fancy.",
+    "description": "A perfectly fine car camping spot. Just the space to pull in, a tent pad, fire ring & pit toilets. Nothing fancy.",
     "url": "https://www.google.com/maps/place/Ash+River+Campground/data=!4m2!3m1!1s0x52bb4b0186c7ab59:0x2224f2a39c1adbc7",
     "lat": 48.4065033,
     "lon": -92.8147092,
@@ -534,7 +534,7 @@
   },
   {
     "name": "Wooden Frog Campground and Day Use Area",
-    "desc": "Located near Voyageurs National Park and the Kabetogama Visitor Center, this campground offers a swimming beach, hiking trail, and scenic picnic area on a pine-covered point on Lake Kabetogama.",
+    "description": "Located near Voyageurs National Park and the Kabetogama Visitor Center, this campground offers a swimming beach, hiking trail, and scenic picnic area on a pine-covered point on Lake Kabetogama.",
     "url": "https://www.google.com/maps/place/Wooden+Frog+Campground+and+Day+Use+Area/data=!4m2!3m1!1s0x52bb437c00774703:0x582b8f7103f5143d",
     "lat": 48.4833486,
     "lon": -93.0583742,
@@ -547,7 +547,7 @@
   },
   {
     "name": "Big Rice Lake Rustic Campground",
-    "desc": "The area offers a drive-in rustic campground with 3 campsites, duck hunting, a boat launch for small boats and some fishing.",
+    "description": "The area offers a drive-in rustic campground with 3 campsites, duck hunting, a boat launch for small boats and some fishing.",
     "url": "https://www.google.com/maps/place/Big+Rice+Lake+Rustic+Campground/data=!4m2!3m1!1s0x52a5470859900b41:0x396d8ea8f96f2884",
     "lat": 47.7046546,
     "lon": -92.4991942,
@@ -560,7 +560,7 @@
   },
   {
     "name": "Poplar River Rustic Campground",
-    "desc": "Several of the sites have access directly to the river, so stream fishing for trout can be done right from your campsite!",
+    "description": "Several of the sites have access directly to the river, so stream fishing for trout can be done right from your campsite!",
     "url": "https://www.google.com/maps/place/Poplar+River+Rustic+Campground/data=!4m2!3m1!1s0x52a636488f92dc35:0xf71bae9b176eb5d2",
     "lat": 47.7385205,
     "lon": -90.7776767,
@@ -573,7 +573,7 @@
   },
   {
     "name": "Six Mile Campground",
-    "desc": "Beautiful, right on the lake, spots have plenty of room to pull in/back out. No hook-ups.",
+    "description": "Beautiful, right on the lake, spots have plenty of room to pull in/back out. No hook-ups.",
     "url": "https://www.google.com/maps/place/Six+Mile+Campground/data=!4m2!3m1!1s0x52b7546f9e2297fd:0x78baedc2a960ee1b",
     "lat": 47.3088434,
     "lon": -94.1238441,
@@ -586,7 +586,7 @@
   },
   {
     "name": "Davis Bayou Campground",
-    "desc": "Davis Bayou Campground is located east of downtown Ocean Springs, Mississippi, and is a part of Gulf Islands National Seashore.",
+    "description": "Davis Bayou Campground is located east of downtown Ocean Springs, Mississippi, and is a part of Gulf Islands National Seashore.",
     "url": "https://www.google.com/maps/place/Davis+Bayou+Campground/data=!4m2!3m1!1s0x889c09daf0803105:0x2cee302c314c47cc",
     "lat": 30.3973845,
     "lon": -88.7961779,
@@ -599,7 +599,7 @@
   },
   {
     "name": "Prairie Home Conservation Area",
-    "desc": "Prairie Home Conservation Area, located in eastern Cooper County, is an upland area with a mix of oldfields, small cropfields, grasslands, and woodlands.",
+    "description": "Prairie Home Conservation Area, located in eastern Cooper County, is an upland area with a mix of oldfields, small cropfields, grasslands, and woodlands.",
     "url": "https://www.google.com/maps/place/Prairie+Home+Conservation+Area/data=!4m2!3m1!1s0x87c35049fcceffbf:0xb3875636f36117df",
     "lat": 38.7801018,
     "lon": -92.600398,
@@ -612,7 +612,7 @@
   },
   {
     "name": "Schell-Osage Conservation Area",
-    "desc": "Schell-Osage Conservation Area and the Osage River, which forms the area's north boundary, derive their names from the Osage Indians that once inhabited the area.",
+    "description": "Schell-Osage Conservation Area and the Osage River, which forms the area's north boundary, derive their names from the Osage Indians that once inhabited the area.",
     "url": "https://www.google.com/maps/place/Schell-Osage+Conservation+Area/data=!4m2!3m1!1s0x87c6f334e1de53e9:0xe5eb1938a2cc5c14",
     "lat": 38.0166981,
     "lon": -94.0710541,
@@ -625,7 +625,7 @@
   },
   {
     "name": "Lead Mine Conservation Area",
-    "desc": "Visitors will find five primitive camping areas. The main campground has 50 sites and is the only location of a privy. No other facilities are provided in any other camping areas. Camping is all on a first come-first served basis with no permit or reservation required.",
+    "description": "Visitors will find five primitive camping areas. The main campground has 50 sites and is the only location of a privy. No other facilities are provided in any other camping areas. Camping is all on a first come-first served basis with no permit or reservation required.",
     "url": "https://www.google.com/maps/place/Lead+Mine+Conservation+Area/data=!4m2!3m1!1s0x87c51b6784cd736f:0x3a8a9dedd1b9acd3",
     "lat": 37.8472943,
     "lon": -92.9076094,
@@ -638,7 +638,7 @@
   },
   {
     "name": "Bar-K Wrangler Campsite",
-    "desc": "Whether you choose one of the designated sites or decide to spread out in the big field across the road you’ll have plenty of room for yourself and your horse when you visit.",
+    "description": "Whether you choose one of the designated sites or decide to spread out in the big field across the road you’ll have plenty of room for yourself and your horse when you visit.",
     "url": "https://www.google.com/maps/place/Bar-K+Wrangler+Campsite/data=!4m2!3m1!1s0x87cfa3d7c9a37fa7:0x2b48f426ce5e36a2",
     "lat": 36.8599413,
     "lon": -93.0078647,
@@ -651,7 +651,7 @@
   },
   {
     "name": "Berryman Campground",
-    "desc": "With just 8 individual campsites and a picnic shelter, it is enjoyed by campers, picnickers, mountain bikers, equestrians, and hikers.",
+    "description": "With just 8 individual campsites and a picnic shelter, it is enjoyed by campers, picnickers, mountain bikers, equestrians, and hikers.",
     "url": "https://www.google.com/maps/place/Berryman+Campground/data=!4m2!3m1!1s0x87d9832a1c23c197:0xaad63581a174a97e",
     "lat": 37.929714,
     "lon": -91.0623573,
@@ -664,7 +664,7 @@
   },
   {
     "name": "Robert E. Talbot Conservation Area",
-    "desc": "Along with high quality upland habitat, visitors will find several miles of multiuse trails that are open to hiking, biking, and horseback riding. Camping is allowed only in the spot designated on the area map. No facilities are provided at the campground. The campground is best suited for tents or small travel trailers/RVs.",
+    "description": "Along with high quality upland habitat, visitors will find several miles of multiuse trails that are open to hiking, biking, and horseback riding. Camping is allowed only in the spot designated on the area map. No facilities are provided at the campground. The campground is best suited for tents or small travel trailers/RVs.",
     "url": "https://www.google.com/maps/place/Robert+E.+Talbot+Conservation+Area/data=!4m2!3m1!1s0x87c8a645d459cd73:0x7e470bd278429cf0",
     "lat": 37.1750196,
     "lon": -93.9369408,
@@ -677,7 +677,7 @@
   },
   {
     "name": "Bismarck Camp Ground",
-    "desc": "The Department provides a boat ramp, parking areas, and disabled accessible facilities, including a fishing jetty.",
+    "description": "The Department provides a boat ramp, parking areas, and disabled accessible facilities, including a fishing jetty.",
     "url": "https://www.google.com/maps/place/Bismarck+Camp+Ground/data=!4m2!3m1!1s0x87d9b33d2869ec4d:0xa9e53dfa9a0858db",
     "lat": 37.7316848,
     "lon": -90.6382578,
@@ -690,7 +690,7 @@
   },
   {
     "name": "Patrick Bridge Access Campground",
-    "desc": "The Patrick Bridge Access is an area with 161 acres that provide fishing access and recreational opportunities on the North Fork of the White River.",
+    "description": "The Patrick Bridge Access is an area with 161 acres that provide fishing access and recreational opportunities on the North Fork of the White River.",
     "url": "https://www.google.com/maps/place/Patrick+Bridge+Access+Campground/data=!4m2!3m1!1s0x87d035dff5cc88e3:0xdee981f726336eb",
     "lat": 36.6436156,
     "lon": -92.2197881,
@@ -703,7 +703,7 @@
   },
   {
     "name": "Clark Memorial Campground",
-    "desc": "This is an open, sunny site in the canyon bottom along the river. There is a forest nearby and fishing opportunities in the Thompson River.",
+    "description": "This is an open, sunny site in the canyon bottom along the river. There is a forest nearby and fishing opportunities in the Thompson River.",
     "url": "https://www.google.com/maps/place/Clark+Memorial+Campground/data=!4m2!3m1!1s0x5360ce91d0822b27:0xf4fdeeba2a4c13cc",
     "lat": 47.631795,
     "lon": -115.174211,
@@ -716,7 +716,7 @@
   },
   {
     "name": "Copper King Campground",
-    "desc": "A picnic table and fire ring is available at each campsite. The campground road is not suitable for long vehicles or trailers. The group site is available on a first-come, first-served basis.",
+    "description": "A picnic table and fire ring is available at each campsite. The campground road is not suitable for long vehicles or trailers. The group site is available on a first-come, first-served basis.",
     "url": "https://www.google.com/maps/place/Copper+King+Campground/data=!4m2!3m1!1s0x5360cee81a02c1e3:0x98618065ff8f4c5f",
     "lat": 47.619381,
     "lon": -115.1879254,
@@ -729,7 +729,7 @@
   },
   {
     "name": "Oliver Reservoir Campground",
-    "desc": "48 campsites with fire pits plus overflow sites without fire pits are available.",
+    "description": "48 campsites with fire pits plus overflow sites without fire pits are available.",
     "url": "https://www.google.com/maps/place/Oliver+Reservoir+Campground/data=!4m2!3m1!1s0x876fc98d70573e59:0xc76f4e408412b756",
     "lat": 41.231038,
     "lon": -103.8242213,
@@ -742,7 +742,7 @@
   },
   {
     "name": "Sacramento Pass BLM Campground",
-    "desc": "Other amenities include picnic tables, grills, shade structures, trash cans and restrooms. No potable water. Camping available in 10 sites with a 14-day limit.",
+    "description": "Other amenities include picnic tables, grills, shade structures, trash cans and restrooms. No potable water. Camping available in 10 sites with a 14-day limit.",
     "url": "https://www.google.com/maps/place/Sacramento+Pass+BLM+Campground/data=!4m2!3m1!1s0x80b16539525e9383:0x134a1b7a5cca9fa3",
     "lat": 39.121753,
     "lon": -114.305063,
@@ -755,7 +755,7 @@
   },
   {
     "name": "Gale River Campground",
-    "desc": "Nice dispersed first come first serve camping area. Sites are very spaced out almost like a quarter of a mile between each site. The sites each have a fire ring.",
+    "description": "Nice dispersed first come first serve camping area. Sites are very spaced out almost like a quarter of a mile between each site. The sites each have a fire ring.",
     "url": "https://www.google.com/maps/place/Gale+River+Campground/data=!4m2!3m1!1s0x4cb47a6d32ff83a5:0xbca39266f5930e4e",
     "lat": 44.2431192,
     "lon": -71.6320281,
@@ -768,7 +768,7 @@
   },
   {
     "name": "Oasis State Park",
-    "desc": "Oasis State Park is set among cottonwood trees, shifting sand dunes, and a small fishing lake. Although fishing is the park’s main draw, it also has several hiking trails, a peaceful and shady campground, and an abundance of birds.",
+    "description": "Oasis State Park is set among cottonwood trees, shifting sand dunes, and a small fishing lake. Although fishing is the park’s main draw, it also has several hiking trails, a peaceful and shady campground, and an abundance of birds.",
     "url": "https://www.google.com/maps/place/Oasis+State+Park/data=!4m2!3m1!1s0x8702c59b7d425b8f:0x754a40338a8af9e2",
     "lat": 34.2561607,
     "lon": -103.3487985,
@@ -781,7 +781,7 @@
   },
   {
     "name": "Rockhound State Park",
-    "desc": "The rugged slopes of the Little Florida Mountains are the setting for this park, which boasts trails, unique geology, wildflower displays, and a peaceful campground.",
+    "description": "The rugged slopes of the Little Florida Mountains are the setting for this park, which boasts trails, unique geology, wildflower displays, and a peaceful campground.",
     "url": "https://www.google.com/maps/place/Rockhound+State+Park/data=!4m2!3m1!1s0x86deeb3291a5f115:0x1826fd4fc643999e",
     "lat": 32.1859751,
     "lon": -107.61223,
@@ -794,7 +794,7 @@
   },
   {
     "name": "Cave Campground",
-    "desc": "Fort Stanton Cave Campground features several shelters, tables and fire rings, as well as a vault toilet. All sites are dry and on a first-come, first-served basis.",
+    "description": "Fort Stanton Cave Campground features several shelters, tables and fire rings, as well as a vault toilet. All sites are dry and on a first-come, first-served basis.",
     "url": "https://www.google.com/maps/place/Cave+Campground/data=!4m2!3m1!1s0x86e1df483694b40b:0x9dbefab43fd0b5b8",
     "lat": 33.5056526,
     "lon": -105.4920001,
@@ -807,7 +807,7 @@
   },
   {
     "name": "Joe Skeen Campground",
-    "desc": "Free campground with shaded picnic tables, very clean, theres a pit toilet nearby and lots of great exploring to do in the conservation area, walked right from the campsite into a great hike.",
+    "description": "Free campground with shaded picnic tables, very clean, theres a pit toilet nearby and lots of great exploring to do in the conservation area, walked right from the campsite into a great hike.",
     "url": "https://www.google.com/maps/place/Joe+Skeen+Campground/data=!4m2!3m1!1s0x8723f0d1f16ae24d:0x77aa652a95f7cb20",
     "lat": 34.9441006,
     "lon": -107.8208559,
@@ -820,7 +820,7 @@
   },
   {
     "name": "Parks Ranch Cave System",
-    "desc": "A gypsum cave with over four miles of mapped passage and twenty different entrances, it is the longest gypsum cave on public land in the United States.",
+    "description": "A gypsum cave with over four miles of mapped passage and twenty different entrances, it is the longest gypsum cave on public land in the United States.",
     "url": "https://www.google.com/maps/place/Parks%E2%80%99+Ranch+Cave+System/data=!4m2!3m1!1s0x86e47b0023dc7b1d:0x95087c02256c2614",
     "lat": 32.1108963,
     "lon": -104.4071193,
@@ -833,7 +833,7 @@
   },
   {
     "name": "Chosa Campground",
-    "desc": "Camping is free and the camping limit is 14 days. The entire area is a large, square, gravel parking lot which makes it easy for leveling.",
+    "description": "Camping is free and the camping limit is 14 days. The entire area is a large, square, gravel parking lot which makes it easy for leveling.",
     "url": "https://www.google.com/maps/place/Chosa+Campground/data=!4m2!3m1!1s0x86e47bea6be25263:0x782633a3203f2653",
     "lat": 32.0886876,
     "lon": -104.4315436,
@@ -846,7 +846,7 @@
   },
   {
     "name": "Upper Karr Recreation Area",
-    "desc": "Upper Karr Canyon Campground is located off of NM6563 (the Sunspot Scenic Byway) and has a 200 person capacity. There are 2 fire rings, 1 toilet, and garbage depositories are provided. RVs limited to 16'.",
+    "description": "Upper Karr Canyon Campground is located off of NM6563 (the Sunspot Scenic Byway) and has a 200 person capacity. There are 2 fire rings, 1 toilet, and garbage depositories are provided. RVs limited to 16'.",
     "url": "https://www.google.com/maps/place/Upper+Karr+Recreation+Area/data=!4m2!3m1!1s0x86e1acac83cce8bf:0xc392e68eb9331b99",
     "lat": 32.880346,
     "lon": -105.77956,
@@ -859,7 +859,7 @@
   },
   {
     "name": "Sunset Reef Campground",
-    "desc": "The Sunset Reef Campground, located off the Washington Ranch Road, is a reclaimed well pad with 11 developed campsites; five RV spaces and six tent sites. Each site has a covered picnic table and grill for your camping convenience with a vault toilet on site. Visitors can dry camp in the area for a maximum of five nights for free.",
+    "description": "The Sunset Reef Campground, located off the Washington Ranch Road, is a reclaimed well pad with 11 developed campsites; five RV spaces and six tent sites. Each site has a covered picnic table and grill for your camping convenience with a vault toilet on site. Visitors can dry camp in the area for a maximum of five nights for free.",
     "url": "https://www.google.com/maps/place/Sunset+Reef+Campground/data=!4m2!3m1!1s0x86e47ba870fde9b9:0x65054adba6121960",
     "lat": 32.1195612,
     "lon": -104.4241892,
@@ -872,7 +872,7 @@
   },
   {
     "name": "Angel Peak Campground",
-    "desc": "9 tent camping sites, each with picnic tables on a concrete pad, gravel pathways, and fire grates.",
+    "description": "9 tent camping sites, each with picnic tables on a concrete pad, gravel pathways, and fire grates.",
     "url": "https://www.google.com/maps/place/Angel+Peak+Campground/data=!4m2!3m1!1s0x873c861e884c2c2b:0x21d0ababc8bbfa14",
     "lat": 36.548448,
     "lon": -107.8600121,
@@ -885,7 +885,7 @@
   },
   {
     "name": "909/Taconic Hereford Trail Parking",
-    "desc": "Download map; one primitive site.",
+    "description": "Download map; one primitive site.",
     "url": "https://www.google.com/maps/place/909%2FTaconic+Hereford+Trail+Parking/data=!4m2!3m1!1s0x89dd6bce0f9e6523:0xe660512f4a3f2e57",
     "lat": 41.7467771,
     "lon": -73.7603608,
@@ -898,7 +898,7 @@
   },
   {
     "name": "Allaben Campground",
-    "desc": "The Allaben parcel is largely undeveloped forest with primitive campsites. The Rochester Hollow area contains ruins of a former estate and a spruce plantation that is the John Burroughs Memorial Forest. Download map from their site.",
+    "description": "The Allaben parcel is largely undeveloped forest with primitive campsites. The Rochester Hollow area contains ruins of a former estate and a spruce plantation that is the John Burroughs Memorial Forest. Download map from their site.",
     "url": "https://www.google.com/maps/place/Allaben+Campground/data=!4m2!3m1!1s0x89dc575ac0d64ebb:0xc6be1644f1ed77ab",
     "lat": 42.106954,
     "lon": -74.3515561,
@@ -911,7 +911,7 @@
   },
   {
     "name": "Kelly Hollow Trail",
-    "desc": "Easy, beautiful hike. Cleanest lean-to and camp area.",
+    "description": "Easy, beautiful hike. Cleanest lean-to and camp area.",
     "url": "https://www.google.com/maps/place/Kelly+Hollow+Trail/data=!4m2!3m1!1s0x89dc8b986de1f673:0x4ce03e886ea6dc19",
     "lat": 42.0784936,
     "lon": -74.6507464,
@@ -924,7 +924,7 @@
   },
   {
     "name": "Woodhull Mountain Trail Parking",
-    "desc": "Beautiful forest and nice primitive camping sites with access to Woodhull Lake.",
+    "description": "Beautiful forest and nice primitive camping sites with access to Woodhull Lake.",
     "url": "https://www.google.com/maps/place/Woodhull+Mountain+Trail+Parking/data=!4m2!3m1!1s0x89d8cf773c98a9b5:0x940c53379b078856",
     "lat": 43.6125477,
     "lon": -75.0905276,
@@ -937,7 +937,7 @@
   },
   {
     "name": "Seneca One Stop",
-    "desc": "They offer showers.",
+    "description": "They offer showers.",
     "url": "https://www.google.com/maps/place/Seneca+One+Stop/data=!4m2!3m1!1s0x89d2de9c98107311:0x34f5954fc306159c",
     "lat": 42.5706659,
     "lon": -79.1007324,
@@ -950,7 +950,7 @@
   },
   {
     "name": "East Otto State Forest Campground",
-    "desc": "East Otto State Forest covers 1,354 acres. The most common recreational use of this area is hunting and camping.",
+    "description": "East Otto State Forest covers 1,354 acres. The most common recreational use of this area is hunting and camping.",
     "url": "https://www.google.com/maps/place/East+Otto+State+Forest+Campground/data=!4m2!3m1!1s0x89d2f0e256c43b8f:0xebfbf438e662655",
     "lat": 42.4314285,
     "lon": -78.7784941,
@@ -963,7 +963,7 @@
   },
   {
     "name": "Moose River Plains Wild Forest",
-    "desc": "The area features more than 100 primitive roadside campsites, miles of marked trails and numerous lakes and ponds.",
+    "description": "The area features more than 100 primitive roadside campsites, miles of marked trails and numerous lakes and ponds.",
     "url": "https://www.google.com/maps/place/Moose+River+Plains+Wild+Forest/data=!4m2!3m1!1s0x89df41528c736363:0x573b6cc057b59eb1",
     "lat": 43.7327029,
     "lon": -74.6985891,
@@ -976,7 +976,7 @@
   },
   {
     "name": "Walter Pratt Memorial park",
-    "desc": "Tall pine trees, sand dune features, wetlands areas in addition to the pond. Don't go there if you're expecting modern amenities.",
+    "description": "Tall pine trees, sand dune features, wetlands areas in addition to the pond. Don't go there if you're expecting modern amenities.",
     "url": "https://www.google.com/maps/place/Walter+Pratt+Memorial+park/data=!4m2!3m1!1s0x4ccc72fc9b9e091f:0xc5131041ac871823",
     "lat": 44.8365455,
     "lon": -74.6734721,
@@ -989,7 +989,7 @@
   },
   {
     "name": "Little Green Pond Campground",
-    "desc": "Huge and ideal flat ground and space for pitching tents.  It doesn't feel at all like you are crowded in with other people.",
+    "description": "Huge and ideal flat ground and space for pitching tents.  It doesn't feel at all like you are crowded in with other people.",
     "url": "https://www.google.com/maps/place/Little+Green+Pond+Campground/data=!4m2!3m1!1s0x4ccb13a6f3c57b73:0xc5c13ca1520900ad",
     "lat": 44.3575131,
     "lon": -74.2957056,
@@ -1002,7 +1002,7 @@
   },
   {
     "name": "Blueberry Patch Campground",
-    "desc": "There are nine campsites available. Each has a fire pit, a tent pad, a picnic table, and parking for up to two cars. This campground is designed for tents or small campers under 24 feet long. Some of the picnic tables are handicap accessible. There are two handicap accessible vault toilets.",
+    "description": "There are nine campsites available. Each has a fire pit, a tent pad, a picnic table, and parking for up to two cars. This campground is designed for tents or small campers under 24 feet long. Some of the picnic tables are handicap accessible. There are two handicap accessible vault toilets.",
     "url": "https://www.google.com/maps/place/Blueberry+Patch+Campground/data=!4m2!3m1!1s0x89d08b613d383551:0xecab50e9fa0c07da",
     "lat": 42.4833312,
     "lon": -76.7991077,
@@ -1015,7 +1015,7 @@
   },
   {
     "name": "Sugar Hill Fire Tower",
-    "desc": "The 9,085-acre Sugar Hill State Forest has the multiple-use Six Nations Trail System, the Finger Lakes Hiking Trail, the Sugar Hill Recreation Area including the Sugar Hill Fire Tower, and five lean-tos.",
+    "description": "The 9,085-acre Sugar Hill State Forest has the multiple-use Six Nations Trail System, the Finger Lakes Hiking Trail, the Sugar Hill Recreation Area including the Sugar Hill Fire Tower, and five lean-tos.",
     "url": "https://www.google.com/maps/place/Sugar+Hill+Fire+Tower/data=!4m2!3m1!1s0x89d059d0fb2cb597:0x6a4757e5f23f1176",
     "lat": 42.387154,
     "lon": -77.0025613,
@@ -1028,7 +1028,7 @@
   },
   {
     "name": "Sanford Lake",
-    "desc": "Very rustic campsites. It is a dry campground. No outhouse, just a filthy portapotty.",
+    "description": "Very rustic campsites. It is a dry campground. No outhouse, just a filthy portapotty.",
     "url": "https://www.google.com/maps/place/Sanford+Lake/data=!4m2!3m1!1s0x89d052dc09a7ce35:0x60c9ac3e439cd6b4",
     "lat": 42.3306171,
     "lon": -77.1779925,
@@ -1041,7 +1041,7 @@
   },
   {
     "name": "Entrance to Sonyea State Forest",
-    "desc": "The 922-acre Sonyea State Forest offers a rustic experience with a limited amount of development. This forest shares a common boundary with Groveland Correctional Facility.",
+    "description": "The 922-acre Sonyea State Forest offers a rustic experience with a limited amount of development. This forest shares a common boundary with Groveland Correctional Facility.",
     "url": "https://www.google.com/maps/place/Entrance+to+Sonyea+State+Forest/data=!4m2!3m1!1s0x89d17d252188fcbb:0xa703906bf570678b",
     "lat": 42.6571854,
     "lon": -77.8412167,
@@ -1054,7 +1054,7 @@
   },
   {
     "name": "Yates Place Campground",
-    "desc": "Yates Place Camp was an old home site, but now serves as an attractive destination for tent camping. A vaul toilet, tables, and grills are available at the site.",
+    "description": "Yates Place Camp was an old home site, but now serves as an attractive destination for tent camping. A vaul toilet, tables, and grills are available at the site.",
     "url": "https://www.google.com/maps/place/Yates+Place+Campground/data=!4m2!3m1!1s0x885485ca53d4da15:0x668011c49dc03758",
     "lat": 35.3648002,
     "lon": -79.9890829,
@@ -1067,7 +1067,7 @@
   },
   {
     "name": "Moon Lake Campground",
-    "desc": "Really nice place to camp for free. Gravel roads to get there but they were in pretty good condition.",
+    "description": "Really nice place to camp for free. Gravel roads to get there but they were in pretty good condition.",
     "url": "https://www.google.com/maps/place/Moon+Lake+Campground/data=!4m2!3m1!1s0x52cfe94a58f5afa1:0x87fbc92919c2b083",
     "lat": 46.8607954,
     "lon": -98.1650131,
@@ -1080,7 +1080,7 @@
   },
   {
     "name": "Silver Springs Campground",
-    "desc": "Nestled in Silver Springs Park in the Northeast corner of Stow, it is one of only a few municipally-operated campgrounds in Ohio.",
+    "description": "Nestled in Silver Springs Park in the Northeast corner of Stow, it is one of only a few municipally-operated campgrounds in Ohio.",
     "url": "https://www.google.com/maps/place/Silver+Springs+Campground/data=!4m2!3m1!1s0x8831240c1b0beecb:0x5c721703c97634f3",
     "lat": 41.1938681,
     "lon": -81.4056606,
@@ -1093,7 +1093,7 @@
   },
   {
     "name": "Annie Creek Sno-Park",
-    "desc": "Annie Creek Sno-Park is located 43 miles northwest of Klamath Falls, Oregon, near the Crater Lake National Park.",
+    "description": "Annie Creek Sno-Park is located 43 miles northwest of Klamath Falls, Oregon, near the Crater Lake National Park.",
     "url": "https://www.google.com/maps/place/Annie+Creek+Sno-Park/data=!4m2!3m1!1s0x54c61ef2435ec889:0x3143d8888fe8c159",
     "lat": 42.7616672,
     "lon": -122.0595179,
@@ -1106,7 +1106,7 @@
   },
   {
     "name": "Lemolo Forebay 2",
-    "desc": "Free Camping. Has Restroom. 6 spots to choose from. Quiet and plenty fish to catch.",
+    "description": "Free Camping. Has Restroom. 6 spots to choose from. Quiet and plenty fish to catch.",
     "url": "https://www.google.com/maps/place/Lemolo+Forebay+2/data=!4m2!3m1!1s0x54c6f71484aae91f:0x8c99e542372b78f5",
     "lat": 43.2943438,
     "lon": -122.4018363,
@@ -1119,7 +1119,7 @@
   },
   {
     "name": "Thielsen Forest Camp",
-    "desc": "Thielsen Forest Camp is a free Forest Service campground that provides a great place to camp for travelers on a budget. This relatively small campground only contains 5 car/ tent sites, but it is often completely unused.",
+    "description": "Thielsen Forest Camp is a free Forest Service campground that provides a great place to camp for travelers on a budget. This relatively small campground only contains 5 car/ tent sites, but it is often completely unused.",
     "url": "https://www.google.com/maps/place/Thielsen+Forest+Camp/data=!4m2!3m1!1s0x54c655d4e30f53f5:0xd5f0a1d6f878ce3d",
     "lat": 43.25602,
     "lon": -122.1647443,
@@ -1132,7 +1132,7 @@
   },
   {
     "name": "Toketee Lake Campground",
-    "desc": "This campground is popular for anglers and year-round visitors to the Umpqua National Forest. Toketee Lake is a reservoir because of a dam. With 33 campsites enjoy the serene views of Toketee Lake under the stars.",
+    "description": "This campground is popular for anglers and year-round visitors to the Umpqua National Forest. Toketee Lake is a reservoir because of a dam. With 33 campsites enjoy the serene views of Toketee Lake under the stars.",
     "url": "https://www.google.com/maps/place/Toketee+Lake+Campground/data=!4m2!3m1!1s0x54c6f654a06fda49:0x7317f979e04499ed",
     "lat": 43.273829,
     "lon": -122.4051106,
@@ -1145,7 +1145,7 @@
   },
   {
     "name": "Thielsen View Campground",
-    "desc": "Few other sites in the Umpqua National Forest offer so much concentrated natural splendor. Visitors can simultaneously bask in the shadow of Mount Bailey and get an unforgettable view of Mount Thielsen from across Diamond Lake. Like its sister site across the lake, Thielsen View Campground is a perennial favorite among anglers.",
+    "description": "Few other sites in the Umpqua National Forest offer so much concentrated natural splendor. Visitors can simultaneously bask in the shadow of Mount Bailey and get an unforgettable view of Mount Thielsen from across Diamond Lake. Like its sister site across the lake, Thielsen View Campground is a perennial favorite among anglers.",
     "url": "https://www.google.com/maps/place/Thielsen+View+Campground/data=!4m2!3m1!1s0x54c6503e8832bdad:0xe59bd557412bef1",
     "lat": 43.1696438,
     "lon": -122.1680632,
@@ -1158,7 +1158,7 @@
   },
   {
     "name": "Diamond Lake Campground",
-    "desc": "Diamond Lake Campground is nestled among conifer trees along the east shore of the mile-high Diamond Lake. This campground offers 51 lakeshore camping sites as well as 187 inshore sites.",
+    "description": "Diamond Lake Campground is nestled among conifer trees along the east shore of the mile-high Diamond Lake. This campground offers 51 lakeshore camping sites as well as 187 inshore sites.",
     "url": "https://www.google.com/maps/place/Diamond+Lake+Campground/data=!4m2!3m1!1s0x54c64fd3fa93353f:0x1ac7efb5f6f394b3",
     "lat": 43.1594836,
     "lon": -122.1332772,
@@ -1171,7 +1171,7 @@
   },
   {
     "name": "Broken Arrow Campground",
-    "desc": "Set back from the shores of Diamond Lake, Broken Arrow Campground is nestled in lodgepole pine forest. This picturesque spot has 121 campsites and boasts views of both Mount Bailey and Mt. Thielsen.",
+    "description": "Set back from the shores of Diamond Lake, Broken Arrow Campground is nestled in lodgepole pine forest. This picturesque spot has 121 campsites and boasts views of both Mount Bailey and Mt. Thielsen.",
     "url": "https://www.google.com/maps/place/Broken+Arrow+Campground/data=!4m2!3m1!1s0x54c64f91b68f8c6d:0xedb3550c9676d939",
     "lat": 43.1328784,
     "lon": -122.1470933,
@@ -1184,7 +1184,7 @@
   },
   {
     "name": "MIll Creek Campground",
-    "desc": "Mill Creek Campground is adjacent to Mill Creek. The campground has opportunity for fishing and swimming. ",
+    "description": "Mill Creek Campground is adjacent to Mill Creek. The campground has opportunity for fishing and swimming. ",
     "url": "https://www.google.com/maps/place/MIll+Creek+Campground/data=!4m2!3m1!1s0x54c609822b44b753:0x8fa81830b81562f5",
     "lat": 42.7945903,
     "lon": -122.4676915,
@@ -1197,7 +1197,7 @@
   },
   {
     "name": "Scott Creek Campground",
-    "desc": "This site lies off the beaten path and is an ideal camping destination if you want to relax in a serene and remote setting. A mix of conifers like lodgepole, ponderosa pines, and white firs shade the six campsites.",
+    "description": "This site lies off the beaten path and is an ideal camping destination if you want to relax in a serene and remote setting. A mix of conifers like lodgepole, ponderosa pines, and white firs shade the six campsites.",
     "url": "https://www.google.com/maps/place/Scott+Creek+Campground/data=!4m2!3m1!1s0x54c625dc05058bc9:0x592fab4b9659d1e6",
     "lat": 42.8852176,
     "lon": -121.924779,
@@ -1210,7 +1210,7 @@
   },
   {
     "name": "Clarion River Campground",
-    "desc": "Nice camp sites for car camping. But since they are first come, there's a good chance you're not going to get a sight to camp at. There are vault toilets.",
+    "description": "Nice camp sites for car camping. But since they are first come, there's a good chance you're not going to get a sight to camp at. There are vault toilets.",
     "url": "https://www.google.com/maps/place/Clarion+River+Campground/data=!4m2!3m1!1s0x89cce064c2625257:0xa19ea5a49bfad25b",
     "lat": 41.3597001,
     "lon": -79.0066391,
@@ -1223,7 +1223,7 @@
   },
   {
     "name": "Bear Mountain Fire Tower",
-    "desc": "Primitive camping along the road to this tower.",
+    "description": "Primitive camping along the road to this tower.",
     "url": "https://www.google.com/maps/place/Bear+Mountain+Fire+Tower/data=!4m2!3m1!1s0x8762b954b8136b33:0x87047d4aaac90f33",
     "lat": 43.8698565,
     "lon": -103.7439783,
@@ -1236,20 +1236,20 @@
   },
   {
     "name": "Sage Creek Campground",
-    "desc": "Experience Badlands National Park overnight in one of its two established campgrounds: Cedar Pass Campground and Sage Creek Campground.",
+    "description": "Experience Badlands National Park overnight in one of its two established campgrounds: Cedar Pass Campground and Sage Creek Campground.",
     "url": "https://www.google.com/maps/place/Sage+Creek+Campground/data=!4m2!3m1!1s0x877dc7bfcb0a175b:0x563cee60ec824617",
     "lat": 43.8940904,
     "lon": -102.4143811,
     "src": "spots",
     "org": "Unknown",
-    "fee": "Pay",
+    "fee": "Free",
     "ratings_count": 394,
     "ratings_value": 1851,
     "type": "campsite"
   },
   {
     "name": "Badlands Boondock Campspot",
-    "desc": "Free with amazing views of Badlands NP. It was pretty busy, but there are quite a few sites. Try to be there in the morning. First come, first served. Very good cell phone reception.",
+    "description": "Free with amazing views of Badlands NP. It was pretty busy, but there are quite a few sites. Try to be there in the morning. First come, first served. Very good cell phone reception.",
     "url": "https://www.google.com/maps/place/Badlands+Boondock+Campspot/data=!4m2!3m1!1s0x877dd1fd078f4059:0x6593c452f5c81f4f",
     "lat": 43.8928526,
     "lon": -102.2284387,
@@ -1262,7 +1262,7 @@
   },
   {
     "name": "Buffalo Gap National Grassland",
-    "desc": "Beautifully peaceful night of camping just outside Badlands NP.",
+    "description": "Beautifully peaceful night of camping just outside Badlands NP.",
     "url": "https://www.google.com/maps/place/Buffalo+Gap+National+Grassland/data=!4m2!3m1!1s0x877cee93d69ee7f9:0x36291343a9694e7e",
     "lat": 43.4374842,
     "lon": -103.0504741,
@@ -1275,7 +1275,7 @@
   },
   {
     "name": "Hugh Glass State Lakeside Use Area",
-    "desc": "Great place to stay!  Fishing is right down the hill! Camping spots are spaced nicely.",
+    "description": "Great place to stay!  Fishing is right down the hill! Camping spots are spaced nicely.",
     "url": "https://www.google.com/maps/place/Hugh+Glass+State+Lakeside+Use+Area/data=!4m2!3m1!1s0x5329690a85347fe1:0x73d7be6ca01aca35",
     "lat": 45.7372628,
     "lon": -102.2390084,
@@ -1288,7 +1288,7 @@
   },
   {
     "name": "Reva Gap Campground",
-    "desc": "A campground with 8 sites located in the Slim Buttes Unit near the Castles National Natural Landmark, one of two on the Sioux Ranger District.",
+    "description": "A campground with 8 sites located in the Slim Buttes Unit near the Castles National Natural Landmark, one of two on the Sioux Ranger District.",
     "url": "https://www.google.com/maps/place/Reva+Gap+Campground/data=!4m2!3m1!1s0x532e9b56a7a2bc03:0x241185024987f655",
     "lat": 45.5258278,
     "lon": -103.1771197,
@@ -1301,7 +1301,7 @@
   },
   {
     "name": "Sandy Creek",
-    "desc": "Sandy Creek Park is located on the southeast side of B.A. Steinhagen Lake between the towns of Woodville and Jasper in southeast Texas.",
+    "description": "Sandy Creek Park is located on the southeast side of B.A. Steinhagen Lake between the towns of Woodville and Jasper in southeast Texas.",
     "url": "https://www.google.com/maps/place/Sandy+Creek/data=!4m2!3m1!1s0x863909f310f4a9e5:0x94444eeca52f541d",
     "lat": 30.8275121,
     "lon": -94.1551468,
@@ -1314,7 +1314,7 @@
   },
   {
     "name": "South Holiday Park",
-    "desc": "Holiday Park campground is on the west side of Benbrook Lake in north central Texas and accessible from US Hwy 377.",
+    "description": "Holiday Park campground is on the west side of Benbrook Lake in north central Texas and accessible from US Hwy 377.",
     "url": "https://www.google.com/maps/place/South+Holiday+Park/data=!4m2!3m1!1s0x864e13ba01a91595:0xbf1c9c3059706558",
     "lat": 32.618387,
     "lon": -97.497617,
@@ -1327,7 +1327,7 @@
   },
   {
     "name": "East Fork Park",
-    "desc": "East Fork Campground, on the southern shores of Lavon Lake, is a popular escape for city dwellers in the Dallas, Texas area or for any visitors passing through the Northern Texas region.",
+    "description": "East Fork Campground, on the southern shores of Lavon Lake, is a popular escape for city dwellers in the Dallas, Texas area or for any visitors passing through the Northern Texas region.",
     "url": "https://www.google.com/maps/place/East+Fork+Park/data=!4m2!3m1!1s0x864c04341f5ba007:0x8e859d385a18e926",
     "lat": 33.0342125,
     "lon": -96.5163121,
@@ -1340,7 +1340,7 @@
   },
   {
     "name": "Aspen Nature Trail",
-    "desc": "This is a location marker for camping on FR 048.",
+    "description": "This is a location marker for camping on FR 048.",
     "url": "https://www.google.com/maps/place/Aspen+Nature+Trail/data=!4m2!3m1!1s0x8745511688290be7:0x873d17df1b63af8d",
     "lat": 40.7262466,
     "lon": -109.4682529,
@@ -1353,7 +1353,7 @@
   },
   {
     "name": "Cedar Mesa Campground",
-    "desc": "This primitive, no-fee campground has five (5) sites, each with a picnic table and fire grate. There is also a pit toilet, but no water is available. Usually two-wheel drive vehicles can access Cedar Mesa Campground, but sometimes the road requires high clearance.",
+    "description": "This primitive, no-fee campground has five (5) sites, each with a picnic table and fire grate. There is also a pit toilet, but no water is available. Usually two-wheel drive vehicles can access Cedar Mesa Campground, but sometimes the road requires high clearance.",
     "url": "https://www.google.com/maps/place/Cedar+Mesa+Campground/data=!4m2!3m1!1s0x8736007a57b55b93:0x69a13a909dc3a54f",
     "lat": 38.0073563,
     "lon": -111.0846397,
@@ -1366,7 +1366,7 @@
   },
   {
     "name": "Sawmill Hollow Campground",
-    "desc": "Previously a free to use area, as of May 2024 there is a fee to use this area now. Campground has a pit toilet in fairly good condition. 4 campsites with picnic tables and fire pits, with additional dispersed camping opportunities along the trail.",
+    "description": "Previously a free to use area, as of May 2024 there is a fee to use this area now. Campground has a pit toilet in fairly good condition. 4 campsites with picnic tables and fire pits, with additional dispersed camping opportunities along the trail.",
     "url": "https://www.google.com/maps/place/Sawmill+Hollow+Campground/data=!4m2!3m1!1s0x874dc47878c76f81:0x7833a23a15724a55",
     "lat": 40.1411618,
     "lon": -111.3410185,
@@ -1379,7 +1379,7 @@
   },
   {
     "name": "Mammoth Designated Dispersed Camping Area",
-    "desc": "Beautiful secluded spot for dispersed camping. Some designated spots are *right* on the creek. There is absolutely no cell service down there.",
+    "description": "Beautiful secluded spot for dispersed camping. Some designated spots are *right* on the creek. There is absolutely no cell service down there.",
     "url": "https://www.google.com/maps/place/Mammoth+Designated+Dispersed+Camping+Area/data=!4m2!3m1!1s0x80caac63a1ffae49:0xe25fbba5ea8a59ff",
     "lat": 37.6375248,
     "lon": -112.672378,
@@ -1392,7 +1392,7 @@
   },
   {
     "name": "Yankee Designated Dispersed Camping Area",
-    "desc": "Yankee Meadows designated dispersed campground is situated in a beautiful valley near Yankee Meadows Reservoir.",
+    "description": "Yankee Meadows designated dispersed campground is situated in a beautiful valley near Yankee Meadows Reservoir.",
     "url": "https://www.google.com/maps/place/Yankee+Designated+Dispersed+Camping+Area/data=!4m2!3m1!1s0x80b556e8f65d1f49:0x52b6876bd8a0c977",
     "lat": 37.773,
     "lon": -112.749,
@@ -1405,7 +1405,7 @@
   },
   {
     "name": "Hurricane Cliffs Recreational Area BLM",
-    "desc": "Camping throughout Hurricane Cliffs is limited to 56 Designated Dispersed Sites that were implemented to protect the expansive views and scenic integrity of the area.",
+    "description": "Camping throughout Hurricane Cliffs is limited to 56 Designated Dispersed Sites that were implemented to protect the expansive views and scenic integrity of the area.",
     "url": "https://www.google.com/maps/place/Hurricane+Cliffs+Recreational+Area+BLM/data=!4m2!3m1!1s0x80caf163d8985def:0xe40639b41d23cb2b",
     "lat": 37.1952748,
     "lon": -113.2183549,
@@ -1418,7 +1418,7 @@
   },
   {
     "name": "Red Canyon Boondock Camping",
-    "desc": "This is a great free camping area in Red Canyon.",
+    "description": "This is a great free camping area in Red Canyon.",
     "url": "https://www.google.com/maps/place/Red+Canyon+Boondock+Camping/data=!4m2!3m1!1s0x87355fe99d2a66a5:0xe79e55dec382fea7",
     "lat": 37.7416469,
     "lon": -112.2689974,
@@ -1431,7 +1431,7 @@
   },
   {
     "name": "Oak Grove Campground",
-    "desc": "There are free dispersed camping along the road leading to this campground.",
+    "description": "There are free dispersed camping along the road leading to this campground.",
     "url": "https://www.google.com/maps/place/Oak+Grove+Campground/data=!4m2!3m1!1s0x80ca61680691d9cb:0xcd312ac4e2afae0e",
     "lat": 37.3163016,
     "lon": -113.4534241,
@@ -1444,7 +1444,7 @@
   },
   {
     "name": "Dixie National Forest Dispersed Camping Area",
-    "desc": "Free dispersed camping in Dixie National forest.",
+    "description": "Free dispersed camping in Dixie National forest.",
     "url": "https://www.google.com/maps/place/Dixie+National+Forest+Dispersed+Camping+Area/data=!4m2!3m1!1s0x87355d3fd8ebb209:0x1ae38f7f701223fb",
     "lat": 37.7236345,
     "lon": -112.2529957,
@@ -1457,7 +1457,7 @@
   },
   {
     "name": "Camp Kelly Campground",
-    "desc": "This is a nice, remote spot in Southwestern Vermont.",
+    "description": "This is a nice, remote spot in Southwestern Vermont.",
     "url": "https://www.google.com/maps/place/Camp+Kelly+Campground/data=!4m2!3m1!1s0x89e0eb8d71557fa1:0xb337124066216352",
     "lat": 42.8882476,
     "lon": -73.0194853,
@@ -1470,7 +1470,7 @@
   },
   {
     "name": "Somerset Airfield",
-    "desc": "Year round free camping surrounded by a dense forest with a pristine River running through.",
+    "description": "Year round free camping surrounded by a dense forest with a pristine River running through.",
     "url": "https://www.google.com/maps/place/Somerset+Airfield/data=!4m2!3m1!1s0x89e0ee098327892b:0x486de91690262af9",
     "lat": 42.9544858,
     "lon": -72.9905306,
@@ -1483,7 +1483,7 @@
   },
   {
     "name": "Bingo Brook",
-    "desc": "No amenities. Very close to roughing it. A few good trails to hike bring machete bushwhacking needed very grown in in many areas.",
+    "description": "No amenities. Very close to roughing it. A few good trails to hike bring machete bushwhacking needed very grown in in many areas.",
     "url": "https://www.google.com/maps/place/Bingo+Brook/data=!4m2!3m1!1s0x4cb53a6c2f906201:0xbf33d600249a49c5",
     "lat": 43.8754575,
     "lon": -72.9121779,
@@ -1496,7 +1496,7 @@
   },
   {
     "name": "Little Fort Campground",
-    "desc": "Little Fort is a first-come-first-serve minimally developed recreation area located near the meadow that was once a rest stop for a stagecoach line.",
+    "description": "Little Fort is a first-come-first-serve minimally developed recreation area located near the meadow that was once a rest stop for a stagecoach line.",
     "url": "https://www.google.com/maps/place/Little+Fort+Campground/data=!4m2!3m1!1s0x89b5b1b24f090589:0x14af4ab9b78ca0c3",
     "lat": 38.866943,
     "lon": -78.44444,
@@ -1509,7 +1509,7 @@
   },
   {
     "name": "Raccoon Canyon",
-    "desc": "Free campsites right between the dirt road and the creek. No facilities. Beautiful little valley.",
+    "description": "Free campsites right between the dirt road and the creek. No facilities. Beautiful little valley.",
     "url": "https://www.google.com/maps/place/Raccoon+Canyon/data=!4m2!3m1!1s0x89b4590e677e3ecb:0xb570bc287321ef3e",
     "lat": 38.5532921,
     "lon": -78.6364215,
@@ -1522,7 +1522,7 @@
   },
   {
     "name": "Two Hatchets Camp Site",
-    "desc": "Beautiful little campsite near the creek. Road also near, a little close to other campsites but not within sight or hearing range.",
+    "description": "Beautiful little campsite near the creek. Road also near, a little close to other campsites but not within sight or hearing range.",
     "url": "https://www.google.com/maps/place/Two+Hatchets+Camp+Site/data=!4m2!3m1!1s0x89b459efbe464d73:0x3c67526a1449696d",
     "lat": 38.5524373,
     "lon": -78.6371474,
@@ -1535,7 +1535,7 @@
   },
   {
     "name": "Walnut Flats Campground",
-    "desc": "This small, primitive campground is well suited for tent camping but also accommodates small recreation vehicles. It has shaded sites clustered around a grassy opening surrounded by forest.",
+    "description": "This small, primitive campground is well suited for tent camping but also accommodates small recreation vehicles. It has shaded sites clustered around a grassy opening surrounded by forest.",
     "url": "https://www.google.com/maps/place/Walnut+Flats+Campground/data=!4m2!3m1!1s0x884e095995c509e5:0x705bf37a6e8d32bd",
     "lat": 37.1990858,
     "lon": -80.885144,
@@ -1548,7 +1548,7 @@
   },
   {
     "name": "Oronoco Campground",
-    "desc": "Beautiful, secluded National Forest camping area. (Free and usable for 21 days) There are several sites by the river (with enough space for an RV) and a few in the field and woods.",
+    "description": "Beautiful, secluded National Forest camping area. (Free and usable for 21 days) There are several sites by the river (with enough space for an RV) and a few in the field and woods.",
     "url": "https://www.google.com/maps/place/Oronoco+Campground/data=!4m2!3m1!1s0x89b336c97512a031:0xe013e338cb39cc0",
     "lat": 37.7479121,
     "lon": -79.2647548,
@@ -1561,7 +1561,7 @@
   },
   {
     "name": "Moody Boat Launch - Mile 13",
-    "desc": "Surrounded by a spectacular nature setting, sits the secluded Moody Boat Launch. Find pleasure in the convenient facility that allows one easy access to the South Fork of the Shenandoah River.",
+    "description": "Surrounded by a spectacular nature setting, sits the secluded Moody Boat Launch. Find pleasure in the convenient facility that allows one easy access to the South Fork of the Shenandoah River.",
     "url": "https://www.google.com/maps/place/Moody+Boat+Launch+-+Mile+13/data=!4m2!3m1!1s0x89b5b30d511e7253:0xdbfef44510abee2d",
     "lat": 38.769719,
     "lon": -78.3930262,
@@ -1574,7 +1574,7 @@
   },
   {
     "name": "Sahara Creek DNR Horse Camp",
-    "desc": "Great horse camp well maintained and managed.",
+    "description": "Great horse camp well maintained and managed.",
     "url": "https://www.google.com/maps/place/Sahara+Creek+DNR+Horse+Camp/data=!4m2!3m1!1s0x54912eecba1ca23b:0xb94c4790840cf284",
     "lat": 46.758252,
     "lon": -122.0857782,
@@ -1587,7 +1587,7 @@
   },
   {
     "name": "Bear Creek Campground",
-    "desc": "This 16-campsite campground is located along the Sol Duc River. Visitors to the campground can take a hiking trail to the river and fish along its banks. Amenities include a scenic overlook, two toilets. Campsites can accommodate up to a 30-foot trailer, though size may vary by site.",
+    "description": "This 16-campsite campground is located along the Sol Duc River. Visitors to the campground can take a hiking trail to the river and fish along its banks. Amenities include a scenic overlook, two toilets. Campsites can accommodate up to a 30-foot trailer, though size may vary by site.",
     "url": "https://www.google.com/maps/place/Bear+Creek+Campground/data=!4m2!3m1!1s0x548e8aa3524e5a9b:0xe102ff971291fe78",
     "lat": 48.0656333,
     "lon": -124.2407638,
@@ -1600,7 +1600,7 @@
   },
   {
     "name": "Hoh Oxbow Campground",
-    "desc": "Located near the Hoh River near the edge of the Olympic National Park, Hoh Oxbow Campground offers pristine camping among a dense, mossy forest of hemlock and fir. Facilities include eight campsites, toilet. Campsites can accommodate up to a 30-foot trailer, though size may vary by site.",
+    "description": "Located near the Hoh River near the edge of the Olympic National Park, Hoh Oxbow Campground offers pristine camping among a dense, mossy forest of hemlock and fir. Facilities include eight campsites, toilet. Campsites can accommodate up to a 30-foot trailer, though size may vary by site.",
     "url": "https://www.google.com/maps/place/Hoh+Oxbow+Campground/data=!4m2!3m1!1s0x548e71a6af1beceb:0x23084005d475132a",
     "lat": 47.8114695,
     "lon": -124.2501998,
@@ -1613,7 +1613,7 @@
   },
   {
     "name": "Minnie Peterson Campground",
-    "desc": "Limited number of spaces. Must have a Discovery Pass. No services services (trash cans, water, electric) since it’s free. Limited number of sites. Sites are very spacious and private.",
+    "description": "Limited number of spaces. Must have a Discovery Pass. No services services (trash cans, water, electric) since it’s free. Limited number of sites. Sites are very spacious and private.",
     "url": "https://www.google.com/maps/place/Minnie+Peterson+Campground/data=!4m2!3m1!1s0x548e6e04df9f6b59:0xf3105b744dadfada",
     "lat": 47.81887,
     "lon": -124.174363,
@@ -1626,7 +1626,7 @@
   },
   {
     "name": "Folsom Farm Site",
-    "desc": "At BLM's Fishtrap Area, the historic Folsom Farm interpretive site demonstrates how the landscape was converted into small farms, ranches, and communities beginning in the late 1800's.",
+    "description": "At BLM's Fishtrap Area, the historic Folsom Farm interpretive site demonstrates how the landscape was converted into small farms, ranches, and communities beginning in the late 1800's.",
     "url": "https://www.google.com/maps/place/Folsom+Farm+Site/data=!4m2!3m1!1s0x549e5a76a9f18c69:0x448356f222795928",
     "lat": 47.3677444,
     "lon": -117.8300936,
@@ -1639,7 +1639,7 @@
   },
   {
     "name": "Meadow Creek Campground",
-    "desc": "This tent-only primitive campground located along the New River is only one mile from the Sandstone Visitor Center. It offers 17 tent sites in an open field. The railroad crossing can be dangerous for larger RVs and trailers. RV camping is prohibited.",
+    "description": "This tent-only primitive campground located along the New River is only one mile from the Sandstone Visitor Center. It offers 17 tent sites in an open field. The railroad crossing can be dangerous for larger RVs and trailers. RV camping is prohibited.",
     "url": "https://www.google.com/maps/place/Meadow+Creek+Campground/data=!4m2!3m1!1s0x884e9bd0670d5df9:0x2124430b9c78733c",
     "lat": 37.7982396,
     "lon": -80.9212941,
@@ -1652,7 +1652,7 @@
   },
   {
     "name": "Gauley Tailwaters Campground",
-    "desc": "The National Park Service offers primitive camping at Gauley Tailwaters, located just below Summersville Dam. From Route 19 at Mt. Nebo, take Route 129 west across the dam, then turn left at the river access sign. Bear right through the parking lot to the campsites. There are 18 drive-in sites for tents and RVs.",
+    "description": "The National Park Service offers primitive camping at Gauley Tailwaters, located just below Summersville Dam. From Route 19 at Mt. Nebo, take Route 129 west across the dam, then turn left at the river access sign. Bear right through the parking lot to the campsites. There are 18 drive-in sites for tents and RVs.",
     "url": "https://www.google.com/maps/place/Gauley+Tailwaters+Campground/data=!4m2!3m1!1s0x884ea957e7d5e2eb:0x251f68de22c03c7e",
     "lat": 38.2147106,
     "lon": -80.8890342,
@@ -1665,7 +1665,7 @@
   },
   {
     "name": "Potato River Falls Campground",
-    "desc": "It's free so most all the spots have tents set up that look like they've been there a while. There are about 8 spots.",
+    "description": "It's free so most all the spots have tents set up that look like they've been there a while. There are about 8 spots.",
     "url": "https://www.google.com/maps/place/Potato+River+Falls+Campground/data=!4m2!3m1!1s0x52a99916a33846f5:0xd9bb3ce5ebd4949a",
     "lat": 46.4626776,
     "lon": -90.5295127,
@@ -1678,7 +1678,7 @@
   },
   {
     "name": "Teton Reservoir BLM Campground",
-    "desc": "Set in the rolling sage grasslands of the Great Divide Basin, this reservoir becomes a watery oasis under the bright summer skies. Fishing for trout in the reservoir and surrounding streams is good; this is also a popular non-motorized water sports area. This is a free site with 5 campsites, vault toilets, boat ramp, and day use parking. Campsites have picnic tables, fire ring/grills, and parking spurs with no pull-throughs.",
+    "description": "Set in the rolling sage grasslands of the Great Divide Basin, this reservoir becomes a watery oasis under the bright summer skies. Fishing for trout in the reservoir and surrounding streams is good; this is also a popular non-motorized water sports area. This is a free site with 5 campsites, vault toilets, boat ramp, and day use parking. Campsites have picnic tables, fire ring/grills, and parking spurs with no pull-throughs.",
     "url": "https://www.google.com/maps/place/Teton+Reservoir+BLM+Campground/data=!4m2!3m1!1s0x875d1e44b5daeb19:0xcdf47a772b61b31a",
     "lat": 41.6031409,
     "lon": -107.2551482,
@@ -1691,7 +1691,7 @@
   },
   {
     "name": "Warren Peak Lookout Tower",
-    "desc": "A location marker for camping opportunities along the road leading to the tower.",
+    "description": "A location marker for camping opportunities along the road leading to the tower.",
     "url": "https://www.google.com/maps/place/Warren+Peak+Lookout+Tower/data=!4m2!3m1!1s0x5332e246538f4987:0x892f8c2ff861f70f",
     "lat": 44.4758185,
     "lon": -104.4438419,
@@ -1704,7 +1704,7 @@
   },
   {
     "name": "Dugway Campground",
-    "desc": "This is a free site with 5 campsites (1 pull-through, 4 spurs), group site, vault toilet, day use parking, picnic tables, fire rings/grills, and parking spur. The main attraction is the North Platte River for fishing and floating. No horses are allowed in the campground.",
+    "description": "This is a free site with 5 campsites (1 pull-through, 4 spurs), group site, vault toilet, day use parking, picnic tables, fire rings/grills, and parking spur. The main attraction is the North Platte River for fishing and floating. No horses are allowed in the campground.",
     "url": "https://www.google.com/maps/place/Dugway+Campground/data=!4m2!3m1!1s0x875d0964c22ae397:0xf5003f6daac5ea29",
     "lat": 41.8602647,
     "lon": -107.0534024,
@@ -1717,7 +1717,7 @@
   },
   {
     "name": "Grayrocks Reservoir",
-    "desc": "This area is beautiful and quiet. You can camp up to 5 days for free. They have dumpsters but no toilets. Nice area to fish or kayak.",
+    "description": "This area is beautiful and quiet. You can camp up to 5 days for free. They have dumpsters but no toilets. Nice area to fish or kayak.",
     "url": "https://www.google.com/maps/place/Grayrocks+Reservoir/data=!4m2!3m1!1s0x8765cbff215d6a3b:0xaefa13e9fa27f661",
     "lat": 42.1446054,
     "lon": -104.7375102,
@@ -1730,7 +1730,7 @@
   },
   {
     "name": "700c camp site",
-    "desc": "Large sites and spread out.",
+    "description": "Large sites and spread out.",
     "url": "https://www.google.com/maps/place/700c+camp+site/data=!4m2!3m1!1s0x8768c0d7da7339d9:0x7a804dfef6877651",
     "lat": 41.167275,
     "lon": -105.322661,
@@ -1743,7 +1743,7 @@
   },
   {
     "name": "Ryan Park Campground",
-    "desc": "The campground is next to Barrett Creek in the Medicine Bow National Forest and features 49 campsites (13 RV pull-through sites) and 1 group campsite. Nearby are free dispersed camping in USFS land.",
+    "description": "The campground is next to Barrett Creek in the Medicine Bow National Forest and features 49 campsites (13 RV pull-through sites) and 1 group campsite. Nearby are free dispersed camping in USFS land.",
     "url": "https://www.google.com/maps/place/Ryan+Park+Campground/data=!4m2!3m1!1s0x87680059e5fe7459:0x4b2151b6dcda84de",
     "lat": 41.3257457,
     "lon": -106.4922113,

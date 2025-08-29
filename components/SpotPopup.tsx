@@ -57,7 +57,7 @@ export default function SpotPopup({ spot, offset = [1, -50], onClose }: SpotPopu
           </a>
         </div>
 
-        <p className="text-gray-700 text-sm mb-4 line-clamp-3">{spot.desc}</p>
+        <p className="text-gray-700 text-sm mb-4 line-clamp-3">{spot.description}</p>
 
         <div className="flex items-center justify-between mb-4">
           {spot.ratings_count > 0 &&

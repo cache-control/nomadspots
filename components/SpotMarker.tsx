@@ -1,5 +1,6 @@
 import type { Spot } from "@/lib/spots/types";
 import {
+  Circle,
   CircleDollarSign,
   Droplet,
   Mountain,
@@ -28,13 +29,15 @@ export default function SpotMarker({ spot, onClick }: SpotMarkerProps) {
   } else if (spot.type === "Showers") {
     icon = <ShowerHead {...iconProps} fill="blue" />
   } else if (spot.org === "BLM") {
-    const color = spot.fee === "Pay" ? "red" : "brown";
+    const color = spot.fee === "Pay" ? "red"
+      : (spot.fee === "Free" ? "green" : "brown");
     icon = <Mountain {...iconProps} fill={color} />
   } else if (spot.org === "USFS") {
-    const color = spot.fee === "Pay" ? "red" : "green";
+    const color = spot.fee === "Pay" ? "red"
+      : (spot.fee === "Free" ? "green" : "brown");
     icon = <TreePine {...iconProps} fill={color} />
   } else if (spot.fee === "Free") {
-    markerColor = "green"
+    icon = <Circle {...iconProps} fill="green" />
   } else if (spot.fee === "Pay") {
     icon = <CircleDollarSign {...iconProps} fill="red" />
   } else if (spot.src === "spots") {

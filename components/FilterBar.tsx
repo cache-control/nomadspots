@@ -37,6 +37,7 @@ export default function FilterBar({ ipc }: FilterBarProps) {
           >
             <ToggleGroupItem value="Sites">Sites</ToggleGroupItem>
             <ToggleGroupItem value="Water">Water</ToggleGroupItem>
+            <ToggleGroupItem value="Toilet">Toilet</ToggleGroupItem>
             <ToggleGroupItem value="Showers">Showers</ToggleGroupItem>
             <ToggleGroupItem value="Unknown">Unknown</ToggleGroupItem>
           </ToggleGroup>

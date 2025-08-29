@@ -5,6 +5,7 @@ import {
   Droplet,
   Mountain,
   ShowerHead,
+  Toilet,
   TreePine,
 } from 'lucide-react';
 import { Marker } from "react-map-gl/maplibre";
@@ -26,6 +27,8 @@ export default function SpotMarker({ spot, onClick }: SpotMarkerProps) {
     markerColor = "black";
   } else if (spot.type === "Water") {
     icon = <Droplet {...iconProps} fill="cyan" />
+  } else if (spot.type === "Toilet") {
+    icon = <Toilet {...iconProps} fill="white" />
   } else if (spot.type === "Showers") {
     icon = <ShowerHead {...iconProps} fill="blue" />
   } else if (spot.org === "BLM") {

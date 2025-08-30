@@ -60,8 +60,8 @@ export async function GET(req: NextRequest) {
                 lat: { $gt: sq.bottomLeft.lat, $lt: sq.topLeft.lat },
                 lon: { $gt: sq.bottomLeft.lon, $lt: sq.bottomRight.lon }
             })
-            .sort({ metacritic: -1 })
-            .limit(30)
+            .sort({ fee: 1 })
+            .limit(300)
             .toArray();
 
         return Response.json(spots)

@@ -27,7 +27,7 @@ export default function ZoomSuggestion({ ipc }: ZoomSuggestionProps) {
   }
 
   return (
-    <div className="absolute flex justify-center w-screen bottom-10">
+    <div className="absolute flex justify-center w-screen bottom-10 z-10">
       <div
         className="select-none hover:cursor-pointer rounded-full shadow-lg text-white font-semibold bg-blue-500 p-3"
         onClick={() => {

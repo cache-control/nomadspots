@@ -22,6 +22,7 @@ export default function SpotMarker({ spot, onClick }: SpotMarkerProps) {
   };
   let icon = null;
   let markerColor;
+  const markerRank = (spot.fee === "Free") ? 1 : 0;
 
   if (spot.src === "MyLocation") {
     markerColor = "black";
@@ -52,6 +53,7 @@ export default function SpotMarker({ spot, onClick }: SpotMarkerProps) {
   return (
     <>
       <Marker
+        style={{ zIndex: markerRank }}
         latitude={spot.lat}
         longitude={spot.lon}
         anchor="bottom"

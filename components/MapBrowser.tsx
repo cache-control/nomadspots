@@ -9,7 +9,7 @@ import { fetchSpots } from "@/lib/spots/utils";
 import PulsingSpinner from "@/components/PulsingSpinner";
 import Controls from "@/components/Controls";
 import SplashScreen from "@/components/SplashScreen";
-import FilterBar, { Filter } from "@/components/FilterBar";
+import FilterSheet, { Filter } from "@/components/FilterSheet";
 import MyLocation from "@/components/MyLocation";
 import RegionOfInterest from "@/components/RegionOfInterest";
 import ZoomSuggestion from "@/components/ZoomSuggestion";
@@ -102,8 +102,8 @@ export default function MapBrowser() {
 
   return (
     <>
+      <FilterSheet ipc={ipc} />
       <PulsingSpinner ipc={ipc} />
-      <FilterBar ipc={ipc} />
       <Controls ipc={ipc} />
       <SplashScreen />
       <Map

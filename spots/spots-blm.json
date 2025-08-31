@@ -988,19 +988,6 @@
     "type": "campsite"
   },
   {
-    "name": "Horsethief Campground",
-    "description": "Campsite - Developed - Non Reservable - Fee. ",
-    "url": "",
-    "lat": 38.58428955,
-    "lon": -109.81420898,
-    "src": "blm",
-    "fee": "Pay",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": "Chamberlain's Ranch Trailhead",
     "description": "Toilet. ",
     "url": "",
@@ -1038,19 +1025,6 @@
     "ratings_count": 0,
     "ratings_value": 0,
     "type": "Toilet"
-  },
-  {
-    "name": "Horsethief Campground",
-    "description": "Campground. ",
-    "url": "",
-    "lat": 38.58428955,
-    "lon": -109.81420898,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
   },
   {
     "name": "Buck Island Campground",
@@ -2611,19 +2585,6 @@
     "ratings_count": 0,
     "ratings_value": 0,
     "type": "campsite"
-  },
-  {
-    "name": "Sloan Canyon Portal Sign",
-    "description": "Toilet. Toilet Flush",
-    "url": "https://www.blm.gov/programs/national-conservation-lands/nevada/sloan-canyon-nca",
-    "lat": 35.9167334,
-    "lon": -115.12417511,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
   },
   {
     "name": "Restroom 9",
@@ -6355,19 +6316,6 @@
     "ratings_count": 0,
     "ratings_value": 0,
     "type": "Toilet"
-  },
-  {
-    "name": "Hatch Point Campground",
-    "description": "Campsite - Developed - Non Reservable - Fee. ",
-    "url": "",
-    "lat": 38.37969971,
-    "lon": -109.6138916,
-    "src": "blm",
-    "fee": "Pay",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
   },
   {
     "name": "Site Number27",
@@ -11063,19 +11011,6 @@
     "type": "campsite"
   },
   {
-    "name": "Windwhistle Campground",
-    "description": "Campsite - Developed - Non Reservable - Fee. ",
-    "url": "",
-    "lat": 38.17749023,
-    "lon": -109.46221924,
-    "src": "blm",
-    "fee": "Pay",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": "Buckhorn Information Center",
     "description": "Toilet. ",
     "url": "",
@@ -11772,19 +11707,6 @@
     "lon": -109.69357717,
     "src": "blm",
     "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Hi Jolly 14 Day Area",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 33.70945,
-    "lon": -114.21625,
-    "src": "blm",
-    "fee": "Free",
     "org": "BLM",
     "ratings_count": 0,
     "ratings_value": 0,
@@ -15852,19 +15774,6 @@
     "url": "",
     "lat": 39.84182868,
     "lon": -106.94091516,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Gypsum Campground",
-    "description": "Campground. Gypsum Campground Steel Kiosk",
-    "url": "",
-    "lat": 39.65506508,
-    "lon": -106.97555189,
     "src": "blm",
     "fee": "Unknown",
     "org": "BLM",
@@ -20384,19 +20293,6 @@
     "type": "Toilet"
   },
   {
-    "name": "Primitive Campsite",
-    "description": "Campsite - Primitive - Reservable - Fee. ",
-    "url": "",
-    "lat": 36.64903541,
-    "lon": -105.69403074,
-    "src": "blm",
-    "fee": "Pay",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": "El Aguaje Campground Shelter ",
     "description": "Campground. El Aguaje Campground offers seven campsites with access to Red River. The campground is wheelchair accessible.",
     "url": "",
@@ -20532,19 +20428,6 @@
     "url": "",
     "lat": 36.66329607,
     "lon": -105.68831307,
-    "src": "blm",
-    "fee": "Pay",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Primitive Campsite",
-    "description": "Campsite - Primitive - Reservable - Fee. ",
-    "url": "",
-    "lat": 36.64845456,
-    "lon": -105.69342612,
     "src": "blm",
     "fee": "Pay",
     "org": "BLM",
@@ -23907,19 +23790,6 @@
     "type": "campsite"
   },
   {
-    "name": "EAGLE CREEK REC SITE",
-    "description": "Toilet. ",
-    "url": "",
-    "lat": 47.91366667,
-    "lon": -110.0575,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
     "name": "JAMES KIPP RECREATION AREA",
     "description": "Toilet. ",
     "url": "",
@@ -24154,19 +24024,6 @@
     "type": "Toilet"
   },
   {
-    "name": "HOLE IN THE WALL REC SITE",
-    "description": "Toilet. ",
-    "url": "",
-    "lat": 47.819572,
-    "lon": -110.063829,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
     "name": "LITTLE SANDY COULEE REC SITE",
     "description": "Toilet. ",
     "url": "",
@@ -24178,19 +24035,6 @@
     "ratings_count": 0,
     "ratings_value": 0,
     "type": "Toilet"
-  },
-  {
-    "name": "DARK BUTTE",
-    "description": "Campground. ",
-    "url": "",
-    "lat": 47.783135,
-    "lon": -109.952811,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
   },
   {
     "name": "EVANS BEND",
@@ -24323,19 +24167,6 @@
     "type": "campsite"
   },
   {
-    "name": "GIST BOTTOM RECREATION AREA",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 47.801889,
-    "lon": -109.010798,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": "Alkali Creek Camp Site",
     "description": "Campsite - Developed - Non Reservable - Fee. ",
     "url": "",
@@ -24362,19 +24193,6 @@
     "type": "campsite"
   },
   {
-    "name": "DARK BUTTE",
-    "description": "Toilet. ",
-    "url": "",
-    "lat": 47.783135,
-    "lon": -109.952811,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
     "name": "SLAUGHTER RIVER",
     "description": "Campground. ",
     "url": "",
@@ -24382,19 +24200,6 @@
     "lon": -109.8482117,
     "src": "blm",
     "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "BLACK BLUFF RAPIDS",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 47.910725,
-    "lon": -110.475363,
-    "src": "blm",
-    "fee": "Free",
     "org": "BLM",
     "ratings_count": 0,
     "ratings_value": 0,
@@ -24492,19 +24297,6 @@
     "type": "Toilet"
   },
   {
-    "name": "BLACK BLUFF RAPIDS",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 47.910725,
-    "lon": -110.475363,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": "EAGLE CREEK REC SITE",
     "description": "Campground. ",
     "url": "",
@@ -24568,32 +24360,6 @@
     "ratings_count": 0,
     "ratings_value": 0,
     "type": "campsite"
-  },
-  {
-    "name": "EAGLE CREEK REC SITE",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 47.91366667,
-    "lon": -110.0575,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "SLAUGHTER RIVER",
-    "description": "Toilet. ",
-    "url": "",
-    "lat": 47.71759926,
-    "lon": -109.8482117,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
   },
   {
     "name": "COAL BANKS LANDING",
@@ -26078,19 +25844,6 @@
     "type": "campsite"
   },
   {
-    "name": "Upper Table Rock Trailhead",
-    "description": "Toilet. ",
-    "url": "https://www.blm.gov/visit/table-rocks-area-critical-environmental-concern",
-    "lat": 42.46633334,
-    "lon": -122.88178846,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
     "name": "Smith River Falls",
     "description": "Campsite - Developed - Non Reservable - No Fee. ",
     "url": "https://www.blm.gov/visit/smith-river-falls",
@@ -26304,19 +26057,6 @@
     "url": "https://www.blm.gov/visit/eight-dollar-mountain-botanical-wayside",
     "lat": 42.23310356,
     "lon": -123.66101181,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
-    "name": "Lower Table Rock Trailhead",
-    "description": "Toilet. ",
-    "url": "https://www.blm.gov/visit/table-rocks-area-critical-environmental-concern",
-    "lat": 42.46856023,
-    "lon": -122.94538915,
     "src": "blm",
     "fee": "Unknown",
     "org": "BLM",
@@ -28106,19 +27846,6 @@
     "type": "campsite"
   },
   {
-    "name": "Pine Creek Campsite 3",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "https://www.blm.gov/visit/pine-creek-camping-area",
-    "lat": 42.45041983,
-    "lon": -108.8592737,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": "Dugway Campsite 3",
     "description": "Campsite - Developed - Non Reservable - No Fee. ",
     "url": "https://www.blm.gov/visit/dugway-campground",
@@ -29250,19 +28977,6 @@
     "type": "campsite"
   },
   {
-    "name": "Pine Creek Camping Area",
-    "description": "Campground. ",
-    "url": "https://www.blm.gov/visit/pine-creek-camping-area",
-    "lat": 42.45041983,
-    "lon": -108.8592737,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": "Fontenelle Creek Campsite 31",
     "description": "Campsite - Developed - Reservable - Fee. ",
     "url": "https://www.blm.gov/visit/fontenelle-creek-recreation-area",
@@ -29723,19 +29437,6 @@
     "url": "https://www.blm.gov/visit/prior-flat-campground",
     "lat": 42.24129109,
     "lon": -106.58246829,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Pine Creek Campsite 2",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "https://www.blm.gov/visit/pine-creek-camping-area",
-    "lat": 42.45041983,
-    "lon": -108.8592737,
     "src": "blm",
     "fee": "Free",
     "org": "BLM",
@@ -30756,19 +30457,6 @@
     "ratings_count": 0,
     "ratings_value": 0,
     "type": "Toilet"
-  },
-  {
-    "name": "Pine Creek Campsite 1",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "https://www.blm.gov/visit/pine-creek-camping-area",
-    "lat": 42.45041983,
-    "lon": -108.8592737,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
   },
   {
     "name": "Fontenelle Creek Campsite 49",
@@ -41327,19 +41015,6 @@
     "type": "Toilet"
   },
   {
-    "name": "Whittaker Creek Campground",
-    "description": "Toilet. ",
-    "url": "https://www.blm.gov/visit/whittaker-creek-recreation-site",
-    "lat": 43.98663456,
-    "lon": -123.66202157,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
     "name": "Bob-Creek Toilet",
     "description": "Toilet. ",
     "url": "https://www.blm.gov/office/vale-district-office",
@@ -41371,19 +41046,6 @@
     "url": "https://www.blm.gov/visit/fishermens-bend",
     "lat": 44.75625,
     "lon": -122.51109,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
-    "name": "Whittaker Creek Campground",
-    "description": "Toilet. ",
-    "url": "https://www.blm.gov/visit/whittaker-creek-recreation-site",
-    "lat": 43.98549346,
-    "lon": -123.6607455,
     "src": "blm",
     "fee": "Unknown",
     "org": "BLM",
@@ -41535,19 +41197,6 @@
     "type": "Toilet"
   },
   {
-    "name": "Umtanum Campground CXT",
-    "description": "Toilet. ",
-    "url": "https://www.blm.gov/visit/yakima-river-canyon-campgrounds",
-    "lat": 46.85499264,
-    "lon": -120.4828185,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
     "name": "Restroom Serves B Loop Sites 17-28 -Flush",
     "description": "Toilet. ",
     "url": "https://www.blm.gov/visit/hyatt-lake-recreation-area",
@@ -41678,19 +41327,6 @@
     "type": "Toilet"
   },
   {
-    "name": "Whittaker Creek Campground",
-    "description": "Toilet. ",
-    "url": "https://www.blm.gov/visit/whittaker-creek-recreation-site",
-    "lat": 43.98567933,
-    "lon": -123.66264201,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
     "name": "Toilet, CXT (#4 Southern)",
     "description": "Toilet. ",
     "url": "https://www.blm.gov/office/vale-district-office",
@@ -41709,19 +41345,6 @@
     "url": "https://www.blm.gov/visit/steens-mountain-cooperative-management-protection-area",
     "lat": 42.82933,
     "lon": -118.91452,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
-    "name": "Whittaker Creek Campground",
-    "description": "Toilet. ",
-    "url": "https://www.blm.gov/visit/whittaker-creek-recreation-site",
-    "lat": 43.9864497,
-    "lon": -123.66395069,
     "src": "blm",
     "fee": "Unknown",
     "org": "BLM",
@@ -43576,149 +43199,6 @@
     "type": "campsite"
   },
   {
-    "name": "Pine Ridge 5",
-    "description": "Campsite - Developed - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Pine Ridge 3",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Stormy Saddle",
-    "description": "Campsite - Developed - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Mid Slope 1",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Mid Slope 3",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Faulkner Prairie 2",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Beaver Ridge 1",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Mid Slope 4",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Faulkner Prairie 1",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Pine Ridge 7",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Mid Slope 2",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": " ",
     "description": "Toilet. ",
     "url": "",
@@ -43730,123 +43210,6 @@
     "ratings_count": 0,
     "ratings_value": 0,
     "type": "Toilet"
-  },
-  {
-    "name": " ",
-    "description": "Toilet. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
-    "name": "Beaver Ridge 2",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Pine Ridge 6",
-    "description": "Campsite - Developed - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Pine Ridge 4",
-    "description": "Campsite - Developed - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Flyette Prairie",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Beaver Ridge 4",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Beaver Ridge 5",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Lacks Creek",
-    "description": "Campsite - Developed - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Beaver Ridge 6",
-    "description": "Campsite - Primitive - Non Reservable - No Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Free",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
   },
   {
     "name": "Screen Cabin",
@@ -43906,19 +43269,6 @@
     "url": "",
     "lat": 39.75993523,
     "lon": -110.91888807,
-    "src": "blm",
-    "fee": "Unknown",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "Toilet"
-  },
-  {
-    "name": "Price Canyon Recreation Area",
-    "description": "Toilet. ",
-    "url": "",
-    "lat": 39.76150409,
-    "lon": -110.91972402,
     "src": "blm",
     "fee": "Unknown",
     "org": "BLM",
@@ -49855,19 +49205,6 @@
     "type": "campsite"
   },
   {
-    "name": "North Fruita Desert Lower Campground G18",
-    "description": "Campsite - Developed - Reservable - Fee. North Fruita Desert Lower Campground Site G18",
-    "url": "",
-    "lat": 39.30813193,
-    "lon": -108.70293054,
-    "src": "blm",
-    "fee": "Pay",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": "North Fruita Desert Lower Campground F8",
     "description": "Campsite - Developed - Reservable - Fee. North Fruita Desert Lower Campground Site F8",
     "url": "",
@@ -54665,19 +54002,6 @@
     "type": "campsite"
   },
   {
-    "name": "Aguirre Spring Recreation Area",
-    "description": "Campsite - Developed - Non Reservable - Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
-    "src": "blm",
-    "fee": "Pay",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
     "name": "Mouth of Dominguez",
     "description": "Campsite - Primitive - Non Reservable - Fee. Large camp on river left at the mouth of Domiguez Creek. Hikers from Bridgeport and other boaters park and walk directly through this camp to access Big Domiguez canyon.",
     "url": "https://www.blm.gov/programs/national-conservation-lands/colorado/dominguez-escalante-nca",
@@ -54839,19 +54163,6 @@
     "url": "https://www.blm.gov/programs/national-conservation-lands/colorado/dominguez-escalante-nca",
     "lat": 38.82995044,
     "lon": -108.35279772,
-    "src": "blm",
-    "fee": "Pay",
-    "org": "BLM",
-    "ratings_count": 0,
-    "ratings_value": 0,
-    "type": "campsite"
-  },
-  {
-    "name": "Aguirre Spring Recreation Area",
-    "description": "Campsite - Developed - Non Reservable - Fee. ",
-    "url": "",
-    "lat": 0,
-    "lon": 0,
     "src": "blm",
     "fee": "Pay",
     "org": "BLM",

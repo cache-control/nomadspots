@@ -61,7 +61,7 @@ export async function GET(req: NextRequest) {
                 lon: { $gt: sq.bottomLeft.lon, $lt: sq.bottomRight.lon }
             })
             .sort({ fee: 1 })
-            .limit(300)
+            .limit(600)
             .toArray();
 
         return Response.json(spots)

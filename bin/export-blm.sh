@@ -1,51 +1,109 @@
 #! /bin/bash
-
-# https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-natl-recreation-site-points/about
 #
-# ID: 3 Name: OVERNIGHT SITE
-# ID: 5 Name: TOILET
-# ID: 6 Name: POTABLE WATER
-# ID: 10 Name: CAMPGROUND
+# https://gis.blm.gov/arcgis/rest/services/recreation/BLM_Natl_Recreation/MapServer
 #
-
 APPNAME=${BASH_SOURCE##*/}
-GEOJSON=/dev/shm/$APPNAME.json
-URL='https://hub.arcgis.com/api/download/v1/items/7438e9e800914c94bad99f70a4f2092d/geojson?redirect=false&layers=1&spatialRefId=4326'
+DIRNAME=${BASH_SOURCE%%$APPNAME}
+API=${DIRNAME}api-blm.sh
 
-[ ! -s $GEOJSON ] && {
-    resultUrl=$(curl -s "$URL" | jq -r .resultUrl)
+usage() {
+cat <<__EOF__
+usage: $APPNAME [OPTION]*
 
-    [ -z "$resultUrl" ] && {
-        echo "GeoJson link is not available; try again later."
-        exit 1
-    }
+    OPTION:
 
-    curl --compressed -sLo $GEOJSON "$resultUrl"
+    -h              this help
+
+__EOF__
+
+    exit 0
 }
 
-< $GEOJSON jq \
+while getopts h c
+do
+    case $c in
+        *)  usage;;
+    esac
+done
+shift $((OPTIND - 1))
+
+query() {
+    service=$1
+    layer=$2
+    offset=0
+    cache=/dev/shm/$APPNAME.$service.$layer.json
+    shift 2
+
+    [ ! -s $cache ] && {
+        while true; do
+            json=$cache.$offset
+            $API -o $offset $service $layer "$*" | tee $json
+            if [ $(jq -r .exceededTransferLimit $json) != true ]; then
+                break
+            fi
+            records=$(jq '.features|length' $json)
+            offset=$(( offset + records))
+        done | jq '.features[]' | jq --slurp > $cache
+    }
+
+    cat $cache
+}
+
+{
+    # BLM Natl RIDB Recreation Sites (Clusters) (0)
+    query recs 0 "ParentActName='CAMPING'"
+
+    # BLM Natl RIDB Recreation Sites (1)
+    query recs 1 "ActivityNames like '%CAMP%'"
+
+    # BLM Natl Facilities Camping and Cabins (2)
+    query recs 2 "FacilityTypeDescription='Campground'"
+
+    # BLM Natl Recreation Sites (3)
+    query recs 3 "FET_TYPE in (3,5,6,10)"
+
+    # BLM Recreation Facilities (0)
+    query facilities 0 "FacilityTypeDescription='Campground'"
+
+    # BLM Recreation Sites (1)
+    query facilities 1 "ActivityNames like '%CAMP%'"
+
+    # BLM Natl RIDB Recreation Camping (2)
+    query facilities 2 "ActivityNames like '%CAMP%'"
+
+    # BLM Natl RIDB Facilities Camping (8)
+    query facilities 8 "FacilityTypeDescription='Campground'"
+
+} | jq \
 '
-.features
-| map(
-    .properties
-    | select(.FET_TYPE as $n|[3,5,6,10]|index($n))
+map(
+    .geometry.coordinates as $gps
+    | .properties
     | {
-        name: .FET_NAME,
-        description: (.FET_SUBTYPE + ". " + .DESCRIPTION),
+        name: (.FET_NAME // .RecAreaName // .FacilityName),
+        description:
+            (
+                if (has("FET_SUBTYPE")) then
+                    .FET_SUBTYPE + ". " + .DESCRIPTION
+                else
+                    .RecAreaDescription // .FacilityDescription // ""
+                end
+            ),
         url:
             (
-                .WEB_LINK // ""
+                .WEB_LINK // .BLMRecURL // .BLMFacURL // ""
                 | gsub("\\s*"; "")
                 | select(contains("/")) // ""
             ),
-        lat: .LAT,
-        lon: .LONG,
+        lat: $gps[1],
+        lon: $gps[0],
         src: "blm",
         fee:
-            (
-                if (.FET_SUBTYPE|test("No Fee")) then
+            (.FET_SUBTYPE // .RecAreaFeeDescription // .FacilityUseFeeDescription // "Unknown")
+            | (
+                if (test("No Fee|None|Free"; "i")) then
                     "Free"
-                elif (.FET_SUBTYPE|test("Fee")) then
+                elif (test("Fee"; "i")) then
                     "Pay"
                 else
                     "Unknown"
@@ -56,14 +114,22 @@ URL='https://hub.arcgis.com/api/download/v1/items/7438e9e800914c94bad99f70a4f209
         ratings_value: 0,
         type:
             (
-                if (.FET_TYPE == 5) then
-                    "Toilet"
-                elif (.FET_TYPE == 6) then
-                    "Water"
+                if (has("FET_TYPE")) then
+                    if (.FET_TYPE == 5) then
+                        "Toilet"
+                    elif (.FET_TYPE == 6) then
+                        "Water"
+                    else
+                        "campsite"
+                    end
                 else
-                    "campsite"
+                    if (.ParentActName // .ActivityNames // .FacilityTypeDescription // "Unknown" | test("CAMPING|Campground")) then
+                        "campsite"
+                    else
+                        "Unknown"
+                    end
                 end
             ),
     }
 )
-'
+' | jq '.[]' | jq --slurp

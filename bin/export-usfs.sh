@@ -5,44 +5,67 @@
 
 APPNAME=${BASH_SOURCE##*/}
 GEOJSON=/dev/shm/$APPNAME.json
-URL='https://hub.arcgis.com/api/download/v1/items/276a0a31bb68477da4825e78b04d455e/geojson?redirect=false&layers=0&spatialRefId=4326'
+URLS=(
+    # Recreation Sites (Feature Layer)
+    'https://hub.arcgis.com/api/download/v1/items/276a0a31bb68477da4825e78b04d455e/geojson?redirect=false&layers=0&spatialRefId=4326'
+
+    # Recreation Area Activities (Feature Layer)
+    'https://hub.arcgis.com/api/download/v1/items/bca3358e80384a2794a672ed48b0be8e/geojson?redirect=false&layers=0&spatialRefId=4326'
+
+    # Recreation Opportunities (Feature Layer)
+    'https://hub.arcgis.com/api/download/v1/items/3e16a3fae435443d9899b10d4ff26124/geojson?redirect=false&layers=0&spatialRefId=4326'
+)
 
 [ ! -s $GEOJSON ] && {
-    resultUrl=$(curl -s "$URL" | jq -r .resultUrl)
+    for url in "${URLS[@]}"; do
+        resultUrl=$(curl -s "$url" | jq -r .resultUrl)
 
-    [ -z "$resultUrl" ] && {
-        echo "GeoJson link is not available; try again later."
-        exit 1
-    }
+        [ -z "$resultUrl" ] && {
+            echo "GeoJson link is not available; try again later."
+            exit 1
+        }
 
-    curl --compressed -sLo $GEOJSON "$resultUrl"
+        curl --compressed -sL "$resultUrl"
+    done | jq '.features[]' | jq --slurp > $GEOJSON
 }
 
 < $GEOJSON jq \
 '
-.features
-| map(
-    .properties
-    | select(.RECAREA_ENABLE == "Y")
-    | select(.SITE_SUBTYPE|test("CAMP"))
+map(
+    .geometry.coordinates as $gps
+    | .properties
+    | select(.RECAREA_ENABLE // .OPENSTATUS // "Unknown"|test("^Y$|open"))
+    | select(.SITE_SUBTYPE // .ACTIVITYNAME // .MARKERACTIVITY // "Unknown"|test("CAMP|Camping"))
     | {
-        name: .RECAREA_NAME,
-        description: .RECAREA_DESCRIPTION,
+        name: (.RECAREA_NAME // .RECAREANAME),
+        description:
+            (
+                .RECAREA_DESCRIPTION // .RECAREADESCRIPTION
+                | gsub("<[^>]*>"; "")
+                | gsub("&nbsp;"; " ")
+                | gsub("&amp;"; "&")
+                | gsub("&lt;"; "<")
+                | gsub("&gt;"; ">")
+            ),
         url:
             (
-                .USDA_PORTAL_URL // ""
+                .USDA_PORTAL_URL // .RECAREAURL // ""
                 | gsub("\\s*"; "")
                 | select(contains("/")) // ""
             ),
-        lat: .LATITUDE,
-        lon: .LONGITUDE,
+        lat: $gps[1],
+        lon: $gps[0],
         src: "usfs",
         fee:
             (
-                if (.FEE_CHARGED == "N") then
-                    "Free"
-                elif (.FEE_CHARGED == "Y") then
-                    "Pay"
+                if (has("FEE_CHARGED")) then
+                    if (.FEE_CHARGED == "N") then
+                        "Free"
+                    elif (.FEE_CHARGED == "Y") then
+                        "Pay"
+                    else
+                        "Unknown"
+                    end
                 else
                     "Unknown"
                 end

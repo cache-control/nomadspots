@@ -88,7 +88,13 @@ map(
                 else
                     .RecAreaDescription // .FacilityDescription // ""
                 end
-            ),
+            )
+            | gsub("<[^>]*>"; "")
+            | gsub("&nbsp;"; " ")
+            | gsub("&amp;"; "&")
+            | gsub("&lt;"; "<")
+            | gsub("&gt;"; ">")
+            ,
         url:
             (
                 .WEB_LINK // .BLMRecURL // .BLMFacURL // ""

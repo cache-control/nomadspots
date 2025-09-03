@@ -22,7 +22,7 @@ export default function Controls({ ipc }: ControlProps) {
         color={autoSearch ? "black" : "grey"}
         onClick={() => {
           setAutoSearch(prev => !prev)
-          ipc.setZoomLevel?.(ipc.zoomLevel + 1e-9);
+          ipc.refreshZoom?.();
         }}
       />
 

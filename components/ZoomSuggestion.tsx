@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { useMap } from 'react-map-gl/maplibre'
+import { useForceUpdate } from "@/lib/spots/hooks";
 import type { IPC } from "@/components/MapBrowser";
 
 interface ZoomSuggestionProps {
@@ -7,22 +7,23 @@ interface ZoomSuggestionProps {
 }
 
 export default function ZoomSuggestion({ ipc }: ZoomSuggestionProps) {
-  const [zoomLevel, setZoomLevel] = useState(ipc.zoomLevel)
+  const forceUpdate = useForceUpdate()
   const { current: map } = useMap();
 
-  ipc.zoomLevel = zoomLevel;
-
-  if (ipc.setZoomLevel === null)
-    ipc.setZoomLevel = setZoomLevel;
+  if (ipc.refreshZoom === null)
+    ipc.refreshZoom = () => forceUpdate();
 
   let zoom = ipc.zoomThreshold;
   let label = "Zoom in to find spots";
 
-  if (zoomLevel >= ipc.zoomThreshold) {
+  if (ipc.loading)
+    return null;
+
+  if (ipc.zoomLevel >= ipc.zoomThreshold) {
     if (ipc.autoSearch)
       return null;
 
-    zoom = zoomLevel;
+    zoom = ipc.zoomLevel;
     label = "Search this area"
   }
 

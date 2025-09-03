@@ -27,7 +27,6 @@ export interface IPC {
   refreshZoom: (() => void) | null;
   setAutoSearch: ((state: boolean) => void) | null;
   setLoading: ((state: boolean) => void) | null;
-  setZoomLevel: ((zoom: number) => void) | null;
 }
 
 const zoomThreshold = 6;
@@ -44,7 +43,6 @@ const ipc: IPC = {
   refreshZoom: null,
   setAutoSearch: null,
   setLoading: null,
-  setZoomLevel: null,
   filter: {
     type: ['Sites', 'Unknown'],
     fee: ['Free', 'Pay', 'Unknown'],
@@ -78,6 +76,7 @@ function handleMoveEnd(e: ViewStateChangeEvent) {
     ipc.spots = [];
     ipc.loading = true;
     ipc.setLoading?.(ipc.loading);
+    ipc.refreshZoom?.();
 
     for (const src of fetchSources) {
       fetchSpots(center, src)
@@ -89,13 +88,15 @@ function handleMoveEnd(e: ViewStateChangeEvent) {
             ipc.setLoading?.(ipc.loading);
           }
           ipc.refreshRoi?.();
+          ipc.refreshZoom?.();
         })
     }
   }
 }
 
 function handleZoomEnd(e: ViewStateChangeEvent) {
-  ipc.setZoomLevel?.(e.viewState.zoom);
+  ipc.zoomLevel = e.viewState.zoom;
+  ipc.refreshZoom?.();
 }
 
 export default function MapBrowser() {

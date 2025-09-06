@@ -3,11 +3,13 @@ import type {
   FreeCampsite,
   IOverlander,
   RecreationGov,
+  Campendium,
+  Dyrt,
   Spot,
   SquareCorners
 } from "@/lib/spots/types";
 
-export type FetchSource = "fcs" | "iol" | "recgov" | "spots";
+export type FetchSource = "fcs" | "iol" | "recgov" | "cpd" | "dyrt" | "spots";
 
 export function haversine(lat1: number, lon1: number, lat2: number, lon2: number) {
   // Convert degrees to radians
@@ -131,6 +133,79 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
         ratings_count: camp.number_of_ratings,
         ratings_value: camp.average_rating * camp.number_of_ratings,
       }))
+    } catch { }
+  }
+
+  if (src === "cpd") {
+    try {
+      const sq = getSquareCorners(pos.lat, pos.lng, 100);
+      const url = "https://www.campendium.com/campgrounds/search.json"
+        + "?filter_by_category_id%5B%5D=PL"
+        + "&order_by=star_rating%2Creviews_count"
+        + `&bounds=((${sq.bottomLeft.lat},+${sq.bottomLeft.lon}),+(${sq.topRight.lat},+${sq.topRight.lon}))`
+        + "&zoom_level=5"
+        + `&center_of_map=%7B%22lng%22%3A${pos.lng}%2C%22lat%22%3A${pos.lat}%7D`
+        + "&price_range=0-0"
+        + "&elevation_range=0-15124"
+      const resp = await fetch(url);
+      const json = await resp.json();
+
+      json.results?.filter((camp: Campendium) => camp.reviews_count >= 3 && camp.stars >= 4)
+      json.results?.sort((a: Campendium, b: Campendium) => b.reviews_count - a.reviews_count)
+        .slice(0, 100)
+        .forEach((camp: Campendium) => spots.push({
+          _id: "cpd-" + camp.id,
+          lat: camp.latitude,
+          lon: camp.longitude,
+          name: camp.title,
+          description: camp.city_state,
+          type: "campsite",
+          url: "https://www.campendium.com/" + camp.slug,
+          fee: (camp.price === "FREE") ? "Free" : "Unknown",
+          src: "cpd",
+          org: camp.category_title?.includes("National Forest") ? "USFS"
+            : (camp.category_title?.includes("BLM") ? "BLM" : "Unknown"),
+          ratings_count: camp.reviews_count,
+          ratings_value: camp.reviews_count * camp.stars,
+        }))
+    } catch { }
+  }
+
+  if (src === "dyrt") {
+    try {
+      const sq = getSquareCorners(pos.lat, pos.lng, 100);
+      const url = "https://thedyrt.com/api/v6/locations/search-results"
+        + "?filter%5Bsearch%5D%5Bdrive_time%5D=any"
+        + "&filter%5Bsearch%5D%5Bair_quality%5D=any"
+        + "&filter%5Bsearch%5D%5Bcategories%5D=established%2Cdispersed"
+        + "&filter%5Bsearch%5D%5Belectric_amperage%5D=any"
+        + "&filter%5Bsearch%5D%5Bmax_vehicle_length%5D=any"
+        + "&filter%5Bsearch%5D%5Bprice%5D=any"
+        + "&filter%5Bsearch%5D%5Brating%5D=4"
+        + `&filter%5Bsearch%5D%5Bbbox%5D=${sq.bottomLeft.lon}%2C${sq.bottomLeft.lat}%2C${sq.topRight.lon}%2C${sq.topRight.lat}`
+        + "&sort=price-low-cents%2Cprice-high-cents"
+        + "&page%5Bnumber%5D=1"
+        + "&page%5Bsize%5D=500"
+      const resp = await fetch(url);
+      const json = await resp.json();
+
+      json.data?.filter((camp: Dyrt) => camp.attributes["reviews-count"] >= 3)
+        .slice(0, 100)
+        .forEach((camp: Dyrt) => spots.push({
+          _id: "dryt-" + camp.id,
+          lat: camp.attributes.latitude,
+          lon: camp.attributes.longitude,
+          name: camp.attributes.name,
+          description: camp.attributes["administrative-area"],
+          type: "campsite",
+          url: ["https://thedyrt.com/camping", camp.attributes["region-name"], camp.attributes.slug].join("/"),
+          fee: (camp.attributes["price-high-cents"] === 0) ? "Free" : "Unknown",
+          src: "dyrt",
+          org: camp.attributes.operator?.includes("Forest Service") ? "USFS"
+            : (camp.attributes.operator?.includes("BLM") ? "BLM" : "Unknown"),
+          ratings_count: camp.attributes["reviews-count"],
+          ratings_value: camp.attributes["reviews-count"] * camp.attributes.rating,
+        }))
     } catch { }
   }
 

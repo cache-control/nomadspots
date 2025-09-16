@@ -70,7 +70,7 @@ function handleMoveEnd(e: ViewStateChangeEvent) {
     ipc.lastCenter = center;
     ipc.searchOnce = false;
 
-    const fetchSources: FetchSource[] = ["fcs", "iol", "recgov", "cpd", "dyrt", "spots"];
+    const fetchSources: FetchSource[] = ["fcs", "iol", "recgov", "cpd", "dyrt", "osm", "spots"];
     let fetchCount = 0;
 
     ipc.spots = [];

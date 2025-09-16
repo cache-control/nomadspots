@@ -164,6 +164,37 @@ export interface Dyrt {
   }
 }
 
+export interface OSM {
+  "id": string;
+  "bbox": [
+    number,
+    number,
+    number,
+    number,
+  ],
+  "type": string;
+  "geometry": {
+    "type": string;
+    "coordinates": [
+      number,
+      number,
+    ]
+  },
+  "properties": {
+    "fee": string;
+    "name": string;
+    "type": string;
+    "tourism": string;
+    "capacity": string;
+    "category": string;
+    "reservation": string;
+    "description": string;
+    "operator": string;
+    "addr:country": string;
+    "contact:website": string;
+  }
+}
+
 export interface Spot {
   _id: string;
   name: string;

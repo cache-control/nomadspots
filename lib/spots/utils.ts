@@ -5,11 +5,12 @@ import type {
   RecreationGov,
   Campendium,
   Dyrt,
+  OSM,
   Spot,
   SquareCorners
 } from "@/lib/spots/types";
 
-export type FetchSource = "fcs" | "iol" | "recgov" | "cpd" | "dyrt" | "spots";
+export type FetchSource = "fcs" | "iol" | "recgov" | "cpd" | "dyrt" | "osm" | "spots";
 
 export function haversine(lat1: number, lon1: number, lat2: number, lon2: number) {
   // Convert degrees to radians
@@ -205,6 +206,37 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
             : (camp.attributes.operator?.includes("BLM") ? "BLM" : "Unknown"),
           ratings_count: camp.attributes["reviews-count"],
           ratings_value: camp.attributes["reviews-count"] * camp.attributes.rating,
+        }))
+    } catch { }
+  }
+
+  if (src === "osm") {
+    try {
+      const sq = getSquareCorners(pos.lat, pos.lng, 100);
+      const url = "https://opencampingmap.org/getcampsites";
+      const formData = new FormData();
+      formData.append("bbox", `${sq.bottomLeft.lon},${sq.bottomLeft.lat},${sq.topRight.lon},${sq.topRight.lat}`);
+      const resp = await fetch(url, { method: 'POST', body: formData });
+      const json = await resp.json();
+
+      json.features?.filter((camp: OSM) => camp.properties.fee !== "yes" && camp.properties.tourism === "camp_site")
+        .sort((a: OSM, b: OSM) => a.properties.fee?.localeCompare(b.properties.fee))
+        .slice(0, 1000)
+        .forEach((camp: OSM) => spots.push({
+          _id: "osm-" + camp.id,
+          lat: camp.geometry.coordinates[1],
+          lon: camp.geometry.coordinates[0],
+          name: camp.properties.name || "Unknown",
+          description: camp.properties.description || camp.properties.operator,
+          type: "campsite",
+          url: camp.properties["contact:website"],
+          fee: camp.properties.fee === "no" ? "Free"
+            : (camp.properties.fee === "yes" ? "Pay" : "Unknown"),
+          src: "osm",
+          org: camp.properties.operator?.search(/Forest Service|USDA|USFS/) >= 0 ? "USFS"
+            : (camp.properties.operator?.search(/BLM|Bureau of Land Management/) >= 0 ? "BLM" : "Unknown"),
+          ratings_count: 0,
+          ratings_value: 0,
         }))
     } catch { }
   }

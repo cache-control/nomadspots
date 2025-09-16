@@ -152,7 +152,7 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
       const json = await resp.json();
 
       json.results?.filter((camp: Campendium) => camp.reviews_count >= 3 && camp.stars >= 4)
-      json.results?.sort((a: Campendium, b: Campendium) => b.reviews_count - a.reviews_count)
+        .sort((a: Campendium, b: Campendium) => b.reviews_count - a.reviews_count)
         .slice(0, 100)
         .forEach((camp: Campendium) => spots.push({
           _id: "cpd-" + camp.id,

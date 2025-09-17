@@ -7,6 +7,7 @@ import { ListFilter } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -39,6 +40,7 @@ export default function FilterSheet({ ipc }: FilterSheetProps) {
         <SheetContent side="right" className="w-80 overflow-y-auto">
           <SheetHeader>
             <SheetTitle>Filter</SheetTitle>
+            <SheetDescription />
           </SheetHeader>
           <div className="flex flex-col justify-start gap-3 w-full">
 

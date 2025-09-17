@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useForceUpdate } from "@/lib/spots/hooks";
 import { IPC } from "@/components/MapBrowser";
 
 interface PulsingSpinnerPops {
@@ -6,12 +6,9 @@ interface PulsingSpinnerPops {
 }
 
 export default function PulsingSpinner({ ipc }: PulsingSpinnerPops) {
-  const [active, setActive] = useState(false);
+  ipc.refreshLoading = useForceUpdate();
 
-  if (ipc.setLoading === null)
-    ipc.setLoading = setActive;
-
-  if (!active)
+  if (!ipc.loading)
     return null;
 
   return (

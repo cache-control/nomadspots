@@ -23,10 +23,12 @@ export interface IPC {
   spots: Spot[];
   zoomLevel: number;
   zoomThreshold: number;
-  refreshRoi: (() => void) | null;
-  refreshZoom: (() => void) | null;
-  setAutoSearch: ((state: boolean) => void) | null;
-  setLoading: ((state: boolean) => void) | null;
+  refreshControls: (() => void);
+  refreshLoading: (() => void);
+  refreshRoi: (() => void);
+  refreshZoom: (() => void);
+  setAutoSearch: ((state: boolean) => void);
+  setLoading: ((state: boolean) => void);
 }
 
 const zoomThreshold = 6;
@@ -39,10 +41,19 @@ const ipc: IPC = {
   spots: [],
   zoomLevel: 4,
   zoomThreshold: zoomThreshold,
-  refreshRoi: null,
-  refreshZoom: null,
-  setAutoSearch: null,
-  setLoading: null,
+  refreshControls: () => { },
+  refreshLoading: () => { },
+  refreshRoi: () => { },
+  refreshZoom: () => { },
+  setAutoSearch: (state: boolean) => {
+    ipc.autoSearch = state;
+    ipc.refreshControls();
+    ipc.refreshZoom();
+  },
+  setLoading: (state: boolean) => {
+    ipc.loading = state;
+    ipc.refreshLoading();
+  },
   filter: {
     type: ['Sites', 'Unknown'],
     fee: ['Free', 'Pay', 'Unknown'],
@@ -74,9 +85,8 @@ function handleMoveEnd(e: ViewStateChangeEvent) {
     let fetchCount = 0;
 
     ipc.spots = [];
-    ipc.loading = true;
-    ipc.setLoading?.(ipc.loading);
-    ipc.refreshZoom?.();
+    ipc.setLoading(true);
+    ipc.refreshZoom();
 
     for (const src of fetchSources) {
       fetchSpots(center, src)
@@ -84,11 +94,10 @@ function handleMoveEnd(e: ViewStateChangeEvent) {
         .then(() => fetchCount++)
         .then(() => {
           if (fetchCount === fetchSources.length) {
-            ipc.loading = false;
-            ipc.setLoading?.(ipc.loading);
+            ipc.setLoading(false);
           }
-          ipc.refreshRoi?.();
-          ipc.refreshZoom?.();
+          ipc.refreshRoi();
+          ipc.refreshZoom();
         })
     }
   }
@@ -96,7 +105,7 @@ function handleMoveEnd(e: ViewStateChangeEvent) {
 
 function handleZoomEnd(e: ViewStateChangeEvent) {
   ipc.zoomLevel = e.viewState.zoom;
-  ipc.refreshZoom?.();
+  ipc.refreshZoom();
 }
 
 export default function MapBrowser() {

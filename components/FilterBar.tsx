@@ -1,6 +1,5 @@
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { IPC } from "@/components/MapBrowser";
-import { useForceUpdate } from "@/lib/spots/hooks";
 
 export interface Filter {
   type: string[];
@@ -13,12 +12,6 @@ export interface FilterBarProps {
 }
 
 export default function FilterBar({ ipc }: FilterBarProps) {
-  const forceUpdate = useForceUpdate();
-
-  function notifyRoi() {
-    forceUpdate();
-    ipc.refreshRoi?.();
-  }
 
   return (
     <div className="bg-white absolute top-3 left-15 rounded-md right-5 z-10 p-3">
@@ -32,7 +25,7 @@ export default function FilterBar({ ipc }: FilterBarProps) {
             value={ipc.filter.type}
             onValueChange={val => {
               ipc.filter.type = val;
-              notifyRoi();
+              ipc.refreshRoi();
             }}
           >
             <ToggleGroupItem value="Sites">Sites</ToggleGroupItem>
@@ -53,7 +46,7 @@ export default function FilterBar({ ipc }: FilterBarProps) {
             value={ipc.filter.fee}
             onValueChange={val => {
               ipc.filter.fee = val;
-              notifyRoi()
+              ipc.refreshRoi()
             }}
           >
             <ToggleGroupItem value="Free">Free</ToggleGroupItem>
@@ -72,7 +65,7 @@ export default function FilterBar({ ipc }: FilterBarProps) {
             value={ipc.filter.org}
             onValueChange={val => {
               ipc.filter.org = val;
-              notifyRoi();
+              ipc.refreshRoi();
             }}
           >
             <ToggleGroupItem value="BLM">BLM</ToggleGroupItem>

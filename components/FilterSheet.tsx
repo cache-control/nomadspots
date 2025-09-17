@@ -27,7 +27,7 @@ export default function FilterSheet({ ipc }: FilterSheetProps) {
 
   function notifyRoi() {
     forceUpdate();
-    ipc.refreshRoi?.();
+    ipc.refreshRoi();
   }
 
   return (

@@ -7,11 +7,8 @@ interface ZoomSuggestionProps {
 }
 
 export default function ZoomSuggestion({ ipc }: ZoomSuggestionProps) {
-  const forceUpdate = useForceUpdate()
   const { current: map } = useMap();
-
-  if (ipc.refreshZoom === null)
-    ipc.refreshZoom = () => forceUpdate();
+  ipc.refreshZoom = useForceUpdate()
 
   let zoom = ipc.zoomThreshold;
   let label = "Zoom in to find spots";

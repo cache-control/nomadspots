@@ -12,11 +12,8 @@ interface RegionOfInterestProps {
 }
 
 export default function RegionOfInterest({ ipc }: RegionOfInterestProps) {
-  const forceUpdate = useForceUpdate()
   const [spotInfo, setSpotInfo] = useState<Spot | null>(null);
-
-  if (ipc.refreshRoi === null)
-    ipc.refreshRoi = forceUpdate;
+  ipc.refreshRoi = useForceUpdate()
 
   const sq = getSquareCorners(ipc.lastCenter.lat, ipc.lastCenter.lng, 100);
 

@@ -194,7 +194,7 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
       const resp = await fetch(url);
       const json = await resp.json();
 
-      json.data?.sort((a: Dyrt, b: Dyrt) => a.attributes["reviews-count"] - b.attributes["reviews-count"])
+      json.data?.sort((a: Dyrt, b: Dyrt) => b.attributes["reviews-count"] - a.attributes["reviews-count"])
         .slice(0, 300)
         .forEach((camp: Dyrt) => spots.push({
           _id: "dryt-" + camp.id,

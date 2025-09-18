@@ -94,7 +94,41 @@ function handleMoveEnd(e: ViewStateChangeEvent) {
         .then(() => fetchCount++)
         .then(() => {
           if (fetchCount === fetchSources.length) {
+            const seenNames: string[] = [];
+            const orgs = ["BLM", "USFS"]
+
+            //remove duplicate site names but also prefer
+            //BLM, USFS, and Free sites.
+            ipc.spots = ipc.spots
+              .sort((a: Spot, b: Spot) => {
+                if (orgs.includes(a.org)) return -1;
+                if (orgs.includes(b.org)) return 1;
+                if (a.fee === "Free") return -1;
+                if (b.fee === "Free") return 1;
+                return 0;
+              })
+              .filter((e: Spot) => {
+                const name = e.name.toLowerCase();
+
+                if (/rv (park|resort)|gas station|travel center/.test(name))
+                  return false;
+
+                if (!seenNames.includes(name)) {
+                  seenNames.push(name);
+                  return true;
+                }
+                return false;
+              })
+              .sort((a: Spot, b: Spot) => {
+                if (a.fee === "Free") return -1;
+                if (b.fee === "Free") return 1;
+                if (orgs.includes(a.org)) return -1;
+                if (orgs.includes(b.org)) return 1;
+                return 0;
+              })
+
             ipc.setLoading(false);
+
           }
           ipc.refreshRoi();
           ipc.refreshZoom();

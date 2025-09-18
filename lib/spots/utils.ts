@@ -222,11 +222,11 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
       json.features?.filter((camp: OSM) => camp.properties.fee !== "yes" && camp.properties.tourism === "camp_site")
         .sort((a: OSM, b: OSM) => a.properties.fee?.localeCompare(b.properties.fee))
         .slice(0, 1000)
-        .forEach((camp: OSM) => spots.push({
+        .forEach((camp: OSM, idx: number) => spots.push({
           _id: "osm-" + camp.id,
           lat: camp.geometry.coordinates[1],
           lon: camp.geometry.coordinates[0],
-          name: camp.properties.name || "Unknown",
+          name: camp.properties.name || `${src}: Unknown #${idx}`,
           description: camp.properties.description || camp.properties.operator,
           type: "campsite",
           url: camp.properties["contact:website"],

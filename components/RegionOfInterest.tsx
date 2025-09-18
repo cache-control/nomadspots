@@ -35,6 +35,11 @@ export default function RegionOfInterest({ ipc }: RegionOfInterestProps) {
 
   return (
     <>
+      {filteredSpots.length > 0 &&
+        <div className="absolute select-none top-2.5 left-[45px] text-white bg-gray-500 text-md rounded shadow-lg px-1 z-10">
+          {filteredSpots.length} spots
+        </div>
+      }
       <Rectangle bounds={sq} />
       {filteredSpots.map((spot: Spot) =>
         <SpotMarker

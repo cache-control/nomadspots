@@ -89,22 +89,26 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
   if (src === "iol") {
     try {
       const resp = await fetch(uri + "&src=iol");
-      const iolJson = await resp.json();
-      iolJson.forEach((iol: IOverlander) => spots.push({
-        _id: "iol-" + iol.guid,
-        lat: iol.location.latitude,
-        lon: iol.location.longitude,
-        name: iol.name,
-        description: iol.description,
-        type: iol.category,
-        url: "https://ioverlander.com/places/" + iol.guid,
-        fee: "Unknown",
-        src: "iol",
-        org: iol.name.includes("BLM") ? "BLM"
-          : (iol.name.includes("National Forest") ? "USFS" : "Unknown"),
-        ratings_count: 0,
-        ratings_value: 0,
-      }))
+      const json = await resp.json();
+      const siteTypes = ["Established Campground", "Water", "Showers"]
+
+      json
+        .filter((iol: IOverlander) => siteTypes.includes(iol.category))
+        .forEach((iol: IOverlander) => spots.push({
+          _id: "iol-" + iol.guid,
+          lat: iol.location.latitude,
+          lon: iol.location.longitude,
+          name: iol.name,
+          description: iol.description,
+          type: iol.category,
+          url: "https://ioverlander.com/places/" + iol.guid,
+          fee: "Unknown",
+          src: "iol",
+          org: iol.name.includes("BLM") ? "BLM"
+            : (iol.name.includes("National Forest") ? "USFS" : "Unknown"),
+          ratings_count: 0,
+          ratings_value: 0,
+        }))
     } catch { }
   }
 

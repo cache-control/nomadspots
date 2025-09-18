@@ -182,7 +182,7 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
       const url = "https://thedyrt.com/api/v6/locations/search-results"
         + "?filter%5Bsearch%5D%5Bdrive_time%5D=any"
         + "&filter%5Bsearch%5D%5Bair_quality%5D=any"
-        + "&filter%5Bsearch%5D%5Bcategories%5D=established%2Cdispersed"
+        + "&filter%5Bsearch%5D%5Bcategories%5D=dispersed"
         + "&filter%5Bsearch%5D%5Belectric_amperage%5D=any"
         + "&filter%5Bsearch%5D%5Bmax_vehicle_length%5D=any"
         + "&filter%5Bsearch%5D%5Bprice%5D=any"
@@ -194,8 +194,8 @@ export const fetchSpots = async (pos: LngLat, src: FetchSource) => {
       const resp = await fetch(url);
       const json = await resp.json();
 
-      json.data?.filter((camp: Dyrt) => camp.attributes["reviews-count"] >= 3)
-        .slice(0, 100)
+      json.data?.sort((a: Dyrt, b: Dyrt) => a.attributes["reviews-count"] - b.attributes["reviews-count"])
+        .slice(0, 300)
         .forEach((camp: Dyrt) => spots.push({
           _id: "dryt-" + camp.id,
           lat: camp.attributes.latitude,

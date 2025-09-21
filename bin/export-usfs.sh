@@ -32,7 +32,8 @@ URLS=(
 < $GEOJSON jq \
 '
 map(
-    .geometry.coordinates as $gps
+    select(.geometry and .properties)
+    | .geometry.coordinates as $gps
     | .properties
     | select(.RECAREA_ENABLE // .OPENSTATUS // "Unknown"|test("^Y$|open"))
     | select(.SITE_SUBTYPE // .ACTIVITYNAME // .MARKERACTIVITY // "Unknown"|test("CAMP|Camping"))

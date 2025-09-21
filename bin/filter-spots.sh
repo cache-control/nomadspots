@@ -13,4 +13,4 @@ begin {
 key=$type . "," . $lon . "," . $lat;
 @seen[key]+=1;
 @seen[key]==1;
-' | jq
+' | jq 'sort_by(.name)'

@@ -44,6 +44,12 @@ export async function GET(req: NextRequest) {
                 headers: {
                     "User-Agent": userAgent,
                     "Accept": "application/json, text/javascript, */*; q=0.01",
+                    'sec-ch-ua': '"Chromium";v="152", "Not?A_Brand";v="24", "Google Chrome";v="152"',
+                    'sec-ch-ua-mobile': '?0',
+                    'sec-ch-ua-platform': '"Linux"',
+                    'sec-fetch-dest': 'empty',
+                    'sec-fetch-mode': 'cors',
+                    'sec-fetch-site': 'same-origin',
                     "Referer": "https://ioverlander.com/explore"
                 }
             });
